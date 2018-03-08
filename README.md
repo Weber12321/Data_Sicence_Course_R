@@ -1,8 +1,8 @@
 # Weber1234
-<h3> 圖資四 黃彥鈞
-<h4> for data science class
+<h3> 圖資四 黃彥鈞 </h3>
+<h4> for data science class</h4>
 <br/>
-<h4> Week 1<br/>
+<h4> Week 1</h4><br/>
 <p>
 1.Practice 1<br/>
     運用if-else句，並且輸入身高資料，來撰寫一個BMI計算器<br/>
