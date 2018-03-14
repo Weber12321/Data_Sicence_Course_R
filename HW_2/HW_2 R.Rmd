@@ -1,0 +1,83 @@
+---
+title: "HW_2 Web Crawling pratice"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 網路爬蟲實作 : 以Dcard為例
+
+爬取網址 : https://www.dcard.tw/f
+實作目標分為3部分: 
+1. 學會使用**CSS Selector** 爬取網頁標題背後的標示程式碼
+2. 使用**rvest**套件解析程式碼，並且搭資料框輸出簡易表格
+3. 儲存成.html以及R Markdown 版本
+
+
+程式碼 :
+
+使用**rvest**套件，並匯入網址
+```{r rvest}
+# 輸入網址
+rm(list = ls())
+library(rvest)
+
+# 輸入網址
+url <- "https://www.dcard.tw/f"
+res <- read_html(url)
+```
+
+透過**CSS selector**提取**標題、主題、來源學校、讚數、回應**資訊
+```{r titles}
+# 標題
+titles <- res %>% html_nodes(".PostEntry_unread_2U217")
+```
+
+```{r cates}
+# 主題
+cates <- res %>% html_nodes(".PostEntry_forum_1m8nJ")
+```
+
+```{r schools}
+# 學校來源
+schools <- res %>% html_nodes(".PostAuthor_root_3vAJf")
+```
+
+```{r likes}
+# 讚數
+likes <- res %>% html_nodes(".Like_counter_1enlP")
+```
+
+```{r responses}
+# 回應
+responses <- res %>% html_nodes(".PostEntry_comments_2iY8V")
+```
+
+使用**html_text**擷取**內文純文字**部分
+```{r text}
+# 標題
+dcard.article.titles <- titles %>% html_text()
+# 主題
+dcard.article.cates <- cates %>% html_text()
+# 學校來源
+dcard.article.schools <- schools %>% html_text() 
+# 讚數
+dcard.article.likes <- likes %>% html_text()
+# 回應
+dcard.article.responses <- responses %>% html_text()
+```
+
+建立資料框，並且放入以上所有資訊
+```{r dataframe}
+dcard.df <- data.frame(dcard.article.titles, dcard.article.cates, dcard.article.schools, dcard.article.likes, dcard.article.responses)
+```
+
+最後加入欄位名稱，匯出結果資料框
+```{r dfname}
+dcard.df.col.names <- c("title", "category", "school", "like", "response")
+colnames(dcard.df) <- dcard.df.col.names
+View(dcard.df)
+```
+
