@@ -1,0 +1,64 @@
+---
+title: "HW3_DataVisualiztion"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Using ggplot2 and ggmap to draw a map
+
+參考資料來源 :<br/>
+
+台北市各行政區人口數及戶數<<https://ca.gov.taipei/News_Content.aspx?n=F98484FF6E3A5230&sms=D19E9582624D83CB&s=EE7D5719108F4026>><br/>
+
+3碼郵遞區號與行政區中心點經緯度對照表<<https://data.gov.tw/dataset/25489>><br/>
+
+資料經過處理維度均改為**經緯度**
+
+視覺化目的在運用**ggplot2**與**ggmap**將北市106年度各區人口數與106年度公共圖書館位址做比較。首先匯入北市範圍為基準的地圖，再運用**熱量圖**作為人口數底圖，並用**點陣圖**標示圖書館位置以利觀察。
+
+使用csv, ggmap, ggplot2 等套件來完成:
+```{r load_library}
+library(csv)
+library(ggmap)
+library(ggplot2)
+```
+
+匯入106年度台北市公共圖書館與人口資料:
+```{r load_data}
+#load 2 files
+lib <- read.csv("TaipeiLibrary.csv", header = TRUE) 
+pop <- read.csv("TaipeiPop.csv", header = TRUE)
+```
+
+用get_map匯入底圖資訊，設定範圍為台北市大小:
+```{r loadmap}
+# ggplot in the map
+map <- get_map(location = c(lon = 121.551484, lat = 25.054342), zoom = 12, language = "zh-TW")
+```
+
+先疊上熱量圖，預設藍色(較易於觀察)五個區間，再疊上點陣圖
+```{r merge_map}
+newmap <- ggmap(map) + 
+  #using heat map to illustrate the population of different districts  
+  stat_density2d(data = pop, aes(x = lon, y = lat, fill = ..level.., alpha = ..level..), geom = "polygon", size = 1, bins = 5) +
+  scale_fill_gradient("Population") +
+  scale_alpha(range = c(.3, .6), guide = FALSE) +
+  guides(fill = guide_colorbar(barwidth = 1.5, barheight = 10)) +
+  # those point indicate the position of Taipei's public library
+  geom_point(aes(x = lon, y = lat), data = lib)
+  
+```
+
+因為容易混淆，不放標籤
+```{r labels}
+# not a good idea to put on labels
+# geom_text(aes(label = library), nudge_x=0, nudge_y=0, data = lib)
+```
+
+**北市人口密度與公共圖書館位置疊圖:**
+```{r map, echo = FALSE}
+newmap
+```
