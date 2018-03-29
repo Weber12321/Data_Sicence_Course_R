@@ -1,0 +1,142 @@
+---
+title: "HW_4wordcloud"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 臉書資料爬取及資料雲練習
+作業目的:<br/>
+本次作業內容旨在:<br/>
+1. 爬取柯文哲市長臉書粉絲專業內文<br/>
+2. 自行鍵入關鍵字作切截<br/>
+3. 繪製文字雲 <br/>
+
+參考網址: <https://www.facebook.com/DoctorKoWJ/>.<br/>
+使用工具: **facebook graphic api explorer**<br/>
+
+程式碼:<br/>
+匯入作業
+```{r package}
+rm(list=ls(all.names=TRUE))
+library(httr)
+library(rjson)
+library(httpuv)
+library(Rfacebook)
+library(xml2)
+library(SnowballC)
+library(plyr)
+library(slam)
+library(NLP)
+library(tm)
+library(jiebaRD)
+library(jiebaR)
+library(RColorBrewer)
+library(wordcloud)
+```
+
+使用**Rfacebook**套件token爬取資料
+```{r facebook}
+#scrap facebook data
+prefex = "https://graph.facebook.com/v2.12/"
+token = "EAACEdEose0cBACJ3odIEv4mizoJCyfBGe8DCOiDmTBirfcBJg07sopBcRut5QIgDZBSKJC3oBJUoQsMayjo3ZA7gGOr5SLrIZAUZB6lmcZCzR2AhQzRpcDwEuCc6apIn1UKC7QtmtMg1daWMixxlTFwTydH1vULHavzt6wYWt1fywLeZCESFINU3PMrFhnz3XWpciuXFv47wZDZD"
+num = 20
+attrs = paste0("DoctorKoWJ/?fields=posts.limit(", num, ")&access_token=")
+url = paste0(prefex, attrs, token)
+res = httr::GET(url)
+data = httr::content(res)
+groups= matrix(unlist(data$posts))
+```
+
+寫入TXT檔，
+```{r txt}
+filename = paste0(1, ".txt")
+write.table(groups,filename)
+```
+建立下一頁變數，
+```{r after}
+after = data$posts$paging$cursors$after
+nextp = data$posts$paging[2]
+
+count = 1
+```
+
+使用while迴圈爬取更多頁面貼文
+```{r nextpage}
+while(nextp != "NULL"){
+  count = count + 1
+  attrs = paste0("DoctorKoWJ/?fields=posts.limit(20)&after", after, "&access_token=")
+  url = paste0(prefex,attrs,token)
+  nextres = httr::GET(url)
+  nextdata = httr::content(nextres)
+  nextgroup = matrix(unlist(nextdata$posts))
+  
+  after = nextdata$posts$paging$cursors$after
+  nextp = nextdata$posts$paging[2+count]
+  
+  filename = paste0(count, ".txt")
+  write.table(nextgroup, filename)
+}
+
+```
+
+讀取爬取資料並用corpus轉換資料型態
+```{r readdata}
+par(family='STKaiti')#讓文字顯示成中文
+filenames <- list.files(getwd(), pattern="*.txt")
+files <- lapply(filenames, readLines)
+docs <- Corpus(VectorSource(files))
+```
+
+使用function寫清理功能，排除資料中的標點、數字、空白、大小寫、與自定義介詞
+```{r datacleaning}
+toSpace <- content_transformer(function(x, pattern) {
+  return (gsub(pattern, " ", x))
+}
+#定義清洗：清洗就是把你找到的符號用空白取代
+)
+docs <- tm_map(docs,toSpace,"V1")
+docs <- tm_map(docs,toSpace,"\n")
+docs <- tm_map(docs,toSpace, "1")
+docs <- tm_map(docs,toSpace, "的")
+docs <- tm_map(docs,toSpace, "及")
+docs <- tm_map(docs,toSpace, "為")
+docs <- tm_map(docs,toSpace, "是")
+docs <- tm_map(docs,toSpace, "在")
+docs <- tm_map(docs,toSpace, "有")
+docs <- tm_map(docs,toSpace, "從")
+docs <- tm_map(docs,toSpace, "得")
+docs <- tm_map(docs,toSpace, "了")
+docs <- tm_map(docs,toSpace, "[A-Za-z0-9]")
+#移除標點符號 (punctuation)
+#移除數字 (digits)、空白 (white space)
+docs <- tm_map(docs, removePunctuation)
+docs <- tm_map(docs, removeNumbers)
+docs <- tm_map(docs, stripWhitespace)
+```
+
+建立切截與關鍵字
+```{r keyword}
+mixseg = worker()
+keyword <- c("健康照護","河邊公園","台北市議會","民調","公共運輸","大眾運輸")
+new_user_word(mixseg, keyword)
+```
+
+繪製文字雲
+```{r pressure, echo=FALSE}
+jieba_tokenizer=function(d){
+  unlist(segment(d[[1]],mixseg))
+}
+seg = lapply(docs, jieba_tokenizer)
+freqFrame = as.data.frame(table(unlist(seg)))
+#畫出文字雲
+wordcloud(freqFrame$Var1,freqFrame$Freq,
+          min.freq=3,  
+          random.order=TRUE,random.color=TRUE, 
+          rot.per=.1, colors=rainbow(length(row.names(freqFrame))),
+          ordered.colors=FALSE,use.r.layout=FALSE,
+          fixed.asp=TRUE)
+```
+
