@@ -18,7 +18,7 @@
     寫猜數字遊戲<br/>
 </p>
 
-<h4> Week 3</h4><br/>
+<h4> Week 2</h4><br/>
 <p>
  使用<b>rvest</b>以及<b>CSS selector</b>練習爬取網頁資訊，以Dcard主頁熱門文章為目標網址<br/>
  爬取內容為 :<br/>
