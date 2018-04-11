@@ -35,6 +35,27 @@
 </p> 
  
  
+<h4> Week 4</h4><br/>
+<p>
+    任務目標 :<br/>
+    1. 使用<i>facebook graphic api explorer</i>爬取資料，用<b>Rfacebook處理</b><br/>
+    2. 使用<b>tm、NLP、結巴</b>等套件清理文本內容<br/>
+    3. 使用wordclould套件繪製文字雲<br/>
+</p>
+<p>
+    參考資源 :<br/>
+    1. "https://www.facebook.com/DoctorKoWJ/" <i>柯文哲市長臉書專頁</i><br/>
+    2. <b>facebook graphic api explorer</b><br/>
+</p> 
+<p>
+    遇到問題 :
+    1. R版本問題，slam、tm、NLP無法安裝 (解決方法 : 用installr升級)<br/>
+    2. 字體問題，warning message : font family not found in Windows font database (未解決)<br/>
+    3. 迴圈無法output大量資料 (未解決)<br/>
+    4. Rjava 無法安裝(未解決)<br/>
+    5. segmentCN 無法使用(未解決)<br/>
+</p>
+ 
  
  
 
