@@ -18,7 +18,7 @@
     寫猜數字遊戲<br/>
 </p>
 
-<h4> Week 2</h4><br/>
+<h4> Week 3</h4><br/>
 <p>
  使用<b>rvest</b>以及<b>CSS selector</b>練習爬取網頁資訊，以Dcard主頁熱門文章為目標網址<br/>
  爬取內容為 :<br/>
@@ -34,7 +34,18 @@
  >>遇到問題 : 原本想用XML與xpath語法來爬取資料，不過結果不慎理想。相較之下，rvest語法簡易許多QQ
 </p> 
  
- 
+<h4> Week 3</h4><br/>
+<p>
+ 目標 :<br/>
+ 運用ggplot2與ggmap將北市106年度各區人口數與106年度公共圖書館位址做比較。首先匯入北市範圍為基準的地圖，再運用熱量圖作為人口數底圖，並用點陣圖標示圖書館位置以利觀察。<br/>
+ 參考資源 :<br/>
+ 參考資料來源 :<br/>
+ 1. 台北市各行政區人口數及戶數<https://ca.gov.taipei/News_Content.aspx?n=F98484FF6E3A5230&sms=D19E9582624D83CB&s=EE7D5719108F4026><br/>
+ 2. 3碼郵遞區號與行政區中心點經緯度對照表<https://data.gov.tw/dataset/25489><br/>
+ 資料經過處理維度均改為<b>經緯度</b>
+
+</p>
+
 <h4> Week 4</h4><br/>
 <p>
     任務目標 :<br/>
@@ -56,6 +67,14 @@
     5. segmentCN 無法使用(未解決)<br/>
 </p>
  
+<h4> Week 5</h4><br/>
+<p>
+ 目標:這周目的是要對文章作詞頻分析<br/>
+ 心得 : 由於我對這周主題真的不是很在行，所以就以助教的範例為練習對象，自己找文章寫了一個<br/>
+ 參考資源 : PPT男女版文章 https://www.ptt.cc/bbs/Boy-Girl/index.html <br/>
+ 遇到問題:<br/>
+   PPT文章xpath路徑並不是完全標準，e.g.time tag就不同
+</p>
  
  
 
