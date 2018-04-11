@@ -1,0 +1,89 @@
+---
+title: "HW_5 TF-IDF practice"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 詞頻分析
+
+這周目的是要對文章作詞頻分析
+心得 : 由於我對這周主題真的不是很在行，所以就以助教的範例為練習對象，自己找文章寫了一個 : 
+
+匯入套件
+```{r packages}
+library(NLP)
+library(tm)
+library(stats)
+library(proxy)
+library(dplyr)
+library(readtext)
+library(jiebaRD)
+library(jiebaR)
+library(slam)
+library(Matrix)
+library(tidytext)
+```
+
+首先用爬蟲下載好PTT文章**https://www.ptt.cc/bbs/Boy-Girl/index.html**, 取出文章並且清理 : 
+```{r data-cleaning}
+rawData = readtext("*.txt")
+docs = Corpus(VectorSource(rawData$text))
+# data clean
+toSpace <- content_transformer(function(x, pattern) {
+  return (gsub(pattern, " ", x))
+})
+docs <- tm_map(docs, removePunctuation)
+docs <- tm_map(docs, removeNumbers)
+docs <- tm_map(docs, stripWhitespace)
+docs <- tm_map(docs, toSpace, "[a-zA-Z]")
+
+```
+
+製作斷詞與加入關鍵詞
+```{r worker}
+keywords = c("男女", "問題", "父母", "分手", "青春")
+mixseg = worker()
+keys = as.matrix(keywords)
+new_user_word(mixseg, keys)
+
+jieba_tokenizer = function(d){
+  unlist(segment(d[[1]], mixseg))
+}
+seg = lapply(docs, jieba_tokenizer)
+freqFrame = as.data.frame(table(unlist(seg)))
+
+d.corpus <- Corpus(VectorSource(seg))
+tdm <- TermDocumentMatrix(d.corpus)
+print( tf <- as.matrix(tdm) )
+DF <- tidy(tf)
+
+```
+
+計算TFIDF，並印出
+```{r tfidf}
+N = tdm$ncol
+tf <- apply(tdm, 2, sum)
+idfCal <- function(word_doc)
+{ 
+  log2( N / nnzero(word_doc) ) 
+}
+idf <- apply(tdm, 1, idfCal)
+
+doc.tfidf <- as.matrix(tdm)
+for(x in 1:nrow(tdm))
+{
+  for(y in 1:ncol(tdm))
+  {
+    doc.tfidf[x,y] <- (doc.tfidf[x,y] / tf[y]) * idf[x]
+  }
+}
+
+findZeroId = as.matrix(apply(doc.tfidf, 1, sum))
+tfidfnn = doc.tfidf[-which(findZeroId == 0),]
+
+write.csv(tfidfnn, "show.csv")
+```
+
