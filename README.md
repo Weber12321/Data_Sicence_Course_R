@@ -76,6 +76,9 @@
    PPT文章xpath路徑並不是完全標準，e.g.time tag就不同
 </p>
 <h4>project 2</h4>
+ <p>
+ 作業連結 : https://github.com/Weber12321/Weber1234/blob/master/Project%202/Group-5-Project-2.pdf
+ </p>
 <h4>project 3</h4>
  <p>
  作業連結 : [project2(titanic)](https://weber12321.github.io/Weber1234/Project3/project_3.nb.html)<br/>
