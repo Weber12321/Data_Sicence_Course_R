@@ -1,0 +1,94 @@
+---
+title: "R Notebook"
+output: titanic_survivors_predict
+---
+
+
+```{r}
+library(caret) #train function
+library(e1071) #svm package
+library(magrittr)
+options(stringsAsFactors = F)
+
+#讀檔
+getwd()
+setwd("/Users/sunny/Documents/GitHub/courseR")
+train <- read.csv("./Project_3/titanicTrain.csv" , na.strings = c("NA", ""), fileEncoding = "big5")
+test <- read.csv("./Project_3/titanicQuestion.csv" , na.strings = c("NA", "") , fileEncoding = "big5")
+train <- train[1:1000,] 
+#combind train檔和test檔，以便後續清理資料
+all <- rbind(train, test)
+
+```
+
+```{r}
+#要建模型的變數都要變成factor
+#survived variable
+all$survived <- all$survived %>% as.factor
+all$sex <- all$sex %>% as.factor
+all$pclass <- all$pclass %>% as.ordered
+
+#PclassSex variable
+all$pclassSex[all$pclass=='1' & all$sex=='male'] <- 'P1Male'
+all$pclassSex[all$pclass=='2' & all$sex=='male'] <- 'P2Male'
+all$pclassSex[all$pclass=='3' & all$sex=='male'] <- 'P3Male'
+all$pclassSex[all$pclass=='1' & all$sex=='female'] <- 'P1Female'
+all$pclassSex[all$pclass=='2' & all$sex=='female'] <- 'P2Female'
+all$pclassSex[all$pclass=='3' & all$sex=='female'] <- 'P3Female'
+all$pclassSex <- as.factor(all$pclassSex)
+
+#family variable
+all$family <- all$parch + all$sibsp + 1
+
+#boat variable
+all$boat[is.na(all$boat)] <- "0"
+all$boat[all$boat != "0"] <- "1"
+all$boat <- all$boat %>% as.factor()
+
+#body variable
+all$body[is.na(all$body)] <- "0"
+all$body[all$body != "0"] <- "1"
+all$body <- all$body %>% as.factor()
+
+#embark variable
+all$embarked[is.na(all$embarked)] <- "X" #如果NA值沒有處理，後續train模型會出錯
+all$embarked <- all$embarked %>% as.factor()
+
+#children variable
+all$age[all$age <= 14] <- 1
+all$age[all$age != 1] <- 0
+all$age[is.na(all$age)] <- 0
+all$age <- all$age %>% as.factor()
+
+#清理好的all data要切割成要用來train的檔案和predict的檔案
+clean_test <- all[is.na(all$survived),]
+clean_train <- all[!is.na(all$survived),]
+
+```
+
+
+
+```{r}
+#SVM
+set.seed(1001)
+titanic_svm <- train(survived~ pclass + sex + family + body + boat, data = clean_train, method='svmRadial', preProcess= c('center', 'scale'), trControl=trainControl(method="cv", number = 5))
+titanic_svm
+
+solution_svm <- predict(titanic_svm, clean_test)
+solution_svm
+
+test$survived <- solution_svm
+setwd("/Users/sunny/Documents/GitHub/courseR/Project_3")
+write.csv(test, file = "answer.csv")
+
+#GBM
+#set.seed(1001)
+#titanic_boost <- train(survived~ pclass + sex + family + body + boat, data = clean_train, method='gbm', preProcess= c('center', 'scale'), trControl=trainControl(method="cv", number=5), verbose=FALSE)
+#print(titanic_boost)
+
+#titanic_boost <- predict(titanic_boost, clean_test)
+#titanic_boost
+```
+
+
+
