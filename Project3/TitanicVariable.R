@@ -60,6 +60,8 @@ train$boat[train$boat == ""] <- "28"
 train$escape[train$boat != "28"] <- "1"
 train$escape[train$boat == "28"] <- "0"
 #see if taking boat is highly related survived
+train$boat<- train$boat %>% as.factor
+train$escape <- train$escape %>% as.factor()
 
 b1 <- ggplot(train$survived, aes(x = escape, fill = survived)) +
   geom_bar(stat='count', position='dodge') + theme_grey() +

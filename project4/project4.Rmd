@@ -1,0 +1,103 @@
+---
+title: "Project4"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Practicing arules method
+此第四次作業將使用自訂資料組，來練習關聯式規則**arules**
+我們這組互相討論，將使用R內建資料庫iris來嘗試。
+在這次作業，首先我們將所有資料因素化來求結果，但跑不出任何內容。
+發現問題所在乃iris資料集的資料類型都是數值化的，因此我們撰寫函數，將所有資料由小而大分成三個區間，並且類別化，從而得到結果。
+另外一個問題在於apriori()方法中Appearence中也遇到錯誤，原本以為真的是鬼打牆，但是結果竟然是此方法中不能有任何**縮排**=="刪去縮排就能跑出結果。
+
+
+
+```{r intro}
+#project intro
+#=========================
+#1. this is a project for practicing the apriori ML method 
+#   as the project#4 for the data science class
+#2. this is complished together by the members of group 5
+#   so you might receive same version of everyone in group 5
+
+#3. in this case we used data from dataset::iris for variables
+#   and through process the dataset to find out the outcome of prediction 
+#=========================
+
+#load the required package
+rm(list=ls())
+library(magrittr)
+```
+
+匯入資料組，並查看之
+```{r dataset iris}
+#build the dataset, and summarize it
+datasets::iris
+str(iris)
+data <- iris
+summary(data)
+#as factor species 
+data$Species <- data$Species %>% as.factor()
+```
+
+設計函數**類別化**所有花瓣與花萼數值資料
+```{r function class}
+#use a function to turn the numeric value of both petal and sepal into
+# "small", "median", "large" interval
+Class<- function(Ary){
+  DATA = c()
+  Min = min(Ary)
+  Max = max(Ary)
+  Inter = (Max - Min)/3
+  
+  Output <- sapply(Ary,function(x){
+    if(Min<= x && x < Min+Inter){
+      DATA=c(DATA,"small")
+    }else if(Min+Inter<= x && x < Min+Inter*2){
+      DATA=c(DATA,"median")
+    }else if(Min+Inter*2<= x && x <= Min+Inter*3){
+      DATA=c(DATA,"large")
+    }
+  })
+  return(Output)
+}
+```
+
+因素化所有資料
+```{r as.factor}
+#as factor all value of petal and sepal
+data$Sepal.Length <- Class(data$Sepal.Length) %>% as.factor()
+data$Sepal.Width <- Class(data$Sepal.Width) %>% as.factor()
+data$Petal.Length <- Class(data$Petal.Length) %>% as.factor()
+data$Petal.Width <- Class(data$Petal.Width) %>% as.factor()
+
+```
+
+計算資料組結果
+```{r arules}
+#load the arules method
+require(arules)
+#apriori data
+rule <- apriori(data, 
+  parameter = list(minlen=4, supp=0.1, conf=0.7),
+  appearance = list(default = "lhs",
+                    rhs = c("Species=setosa", "Species=versicolor", "Species=virginica")))
+#observe data by lift
+inspect(rule)
+sort.rule <- sort(rule, by="lift")
+inspect(sort.rule)
+```
+
+##視覺化結果
+```{r plot, echo=FALSE}
+#load the plotting method and plot those outcomes
+require(arulesViz)
+plot(sort.rule)
+plot(sort.rule, method="graph", control=list(type="items"))
+plot(sort.rule, method="grouped")
+```
+
