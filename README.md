@@ -75,7 +75,18 @@
  遇到問題:<br/>
    PPT文章xpath路徑並不是完全標準，e.g.time tag就不同
 </p>
- 
- 
+<h4>project 2</h4>
+ <p>
+ 作業連結 : https://github.com/Weber12321/Weber1234/blob/master/Project%202/Group-5-Project-2.pdf
+ </p>
+<h4>project 3</h4>
+ <p>
+ 作業連結 : [project2(titanic)](https://weber12321.github.io/Weber1234/Project3/project_3.nb.html)<br/>
+ 作業說明 : <br/>
+ 使用給定train 資料來預測test 資料生還結果，有別於project2 這次資料多了boat、body、home.dest欄位<br/>
+ 寫作情況 : 與組員討論互相完成<br/>
+ 遇到的問題 : 無法清楚得知body確切意義，不過可以存訓練資料中看出，有明確被標出body實質資訊的乘客，都沒有<b>生還</b><br/>
+ 顯示body的重要性十足，已具有成為預測參數的資格。初步猜測body為遺體資訊，具體規律無從得知。
+ </p>
 
  
