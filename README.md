@@ -81,12 +81,29 @@
  </p>
 <h4>project 3</h4>
  <p>
- 作業連結 : [project2(titanic)](https://weber12321.github.io/Weber1234/Project3/project_3.nb.html)<br/>
+ 作業連結 : [project3(titanic)](https://weber12321.github.io/Weber1234/Project3/project_3.nb.html)<br/>
  作業說明 : <br/>
  使用給定train 資料來預測test 資料生還結果，有別於project2 這次資料多了boat、body、home.dest欄位<br/>
  寫作情況 : 與組員討論互相完成<br/>
  遇到的問題 : 無法清楚得知body確切意義，不過可以存訓練資料中看出，有明確被標出body實質資訊的乘客，都沒有<b>生還</b><br/>
  顯示body的重要性十足，已具有成為預測參數的資格。初步猜測body為遺體資訊，具體規律無從得知。
+ </p>
+
+<h4>project 4</h4>
+ <p>
+ 作業連結 : [project4(iris)](https://weber12321.github.io/Weber1234/project4/project4.html)<br/>
+ 作業說明 : <br/>
+ 此第四次作業將使用自訂資料組，來練習關聯式規則arules 我們這組互相討論，將使用R內建資料庫iris來嘗試。<br/>
+ 在這次作業，首先我們將所有資料因素化來求結果，但跑不出任何內容。<br/>
+ 問題一 :<br/>
+ 發現問題所在乃iris資料集的資料類型都是數值化的，而apriori不能使用數值資料判斷，<br/>
+ 因此我們撰寫函數，將所有資料由小而大分成三個區間，並且類別化，從而得到結果。<br/>
+ 問題二 :<br/>
+ 另外一個問題在於apriori()方法中Appearence中也遇到錯誤，原本以為真的是鬼打牆，但是結果竟然是此方法中不能有任何縮排==“刪去縮排就能跑出結果。<br/>
+ 寫作情況 : 與組員討論互相完成<br/>
+ 
+ 結果 :<br/>
+ iris資料組其實蠻一翻兩瞪眼的，資料間confidence都很高，甚至有一些到10，因此我們得出結論是，這三種花卉(setosa、versicolor、virginica)的生物特性其實分類也很直觀，不同種類有相異的長寬區間，所以出來的結果這麼極端。
  </p>
 
  
