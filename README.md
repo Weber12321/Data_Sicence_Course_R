@@ -106,4 +106,7 @@
  iris資料組其實蠻一翻兩瞪眼的，資料間confidence都很高，甚至有一些到10，因此我們得出結論是，這三種花卉(setosa、versicolor、virginica)的生物特性其實分類也很直觀，不同種類有相異的長寬區間，所以出來的結果這麼極端。
  </p>
 
- 
+<h4>project 5</h4>
+ <p>
+ 作業連結 : [project5(wine)](https://weber12321.github.io/Weber1234/Project5/project.html)<br/>
+</p>
