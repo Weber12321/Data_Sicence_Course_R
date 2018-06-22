@@ -72,7 +72,7 @@
  
 <h2> Week 5</h2>
 <p>
- HW_5 : 練習使用<b>TFIDF</b> (使用柯文哲2018年臉所有發文內容為分析對象)<br>
+ HW_5 : 練習使用<b>TFIDF</b> (使用柯文哲2018年FB所有發文內容為分析對象)<br>
  >>>作業連結 : https://weber12321.github.io/Weber1234/HW_5/HW_5.html<br/>
   寫作情況 : 自行完成<br>
 </p>
