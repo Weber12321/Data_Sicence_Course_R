@@ -1,14 +1,3 @@
----
-title: "HW_5"
-output: html_document
----
-
-## HW_5 
-練習TFIDF
-使用柯文哲臉書爬下來的2018的po文為研究對象，抓出常用的文字
-
-## 載入套件
-```{r pack }
 # ===== TFIDF程式 : 臉書
 # ===== 處理柯文哲1月至5月的文章
 # ------------------------------------------
@@ -30,10 +19,7 @@ library(tidyr)
 library(ggplot2)
 library(RColorBrewer)
 library(wordcloud)
-```
 
-## 匯入爬取資料並清理
-```{r clean}
 # ===== 資料清理
 # 匯入資料組
 setwd("/Users/Weber/Documents/GitHub/Weber1234/HW_5")
@@ -50,10 +36,7 @@ data <- data[!duplicated(data$post), ]
 data <- data[data$year == "2018",]
 row.names(data) = c(1:138) # 由資料數重新編排號碼
 # 依月份建立子資料組
-```
 
-## 建立切詞
-```{r corp}
 # ===== 切詞
 # ---- Jan
 docs <- Corpus(VectorSource(data$post))
@@ -103,10 +86,7 @@ tdm <- TermDocumentMatrix(d.corpus)
 tf <- as.matrix(tdm)
 DF <- tidy(tf)
 head(DF, 10)
-```
 
-## 建立TFIDF
-```{r tfidf}
 # ===== 建立TF-IDF
 N = tdm$ncol
 tf <- apply(tdm, 2, sum)
@@ -128,28 +108,23 @@ findZeroId = as.matrix(apply(doc.tfidf, 1, sum))
 # tfidfnn = doc.tfidf[-which(findZeroId == 0),]
 head(doc.tfidf, 10)
 
-# 取出最多用最多的詞
+# 畫個助畫柱狀圖
 freq=rowSums(as.matrix(doc.tfidf))
 high.freq=tail(sort(freq),n=20)
 high.freq
 hfp.df=as.data.frame(sort(high.freq))
 names(hfp.df) <- "frequence"
 hfp.df$names <- rownames(hfp.df) 
-# 刪除亂碼
 hfp.df <- hfp.df[-c(14,16,17,19,20),]
 hfp.df <- hfp.df[order(hfp.df$frequence),]
 rownames(hfp.df) <- c(1:15) 
-```
-## 畫一張TFIDF長條圖，並另外繪製一張文字雲來驗證TFIDF是否準確
 
-```{r hist,  echo=FALSE}
+
 ggplot(hfp.df, aes(hfp.df$names, hfp.df$frequence)) +
   geom_bar(stat="identity", fill="olivedrab", colour="black") +
   xlab("Frequency") + ylab("Terms") +
   ggtitle("Term frequencies")
-```
 
-```{r wc,  echo=FALSE}
 # 順便畫一個文字雲來看看結果
 wordcloud(freqFrame$Var1,freqFrame$Freq,
           min.freq=30,
@@ -157,11 +132,4 @@ wordcloud(freqFrame$Var1,freqFrame$Freq,
           rot.per=.1, colors=rainbow(length(row.names(freqFrame))),
           ordered.colors=FALSE,use.r.layout=FALSE,
           fixed.asp=TRUE)
-```
 
-
-## 結論
-1. 切完的詞在TFIDF步驟總會出現一些亂碼QQ
-2. 文字雲的驗證蠻成功的
-3. 根據第一條，我將某些亂碼**手動去除**可能是造成文字雲與長條圖些微差異的地方
-4. 市長蠻喜歡強調城市與大家、可以等等正面性詞彙，可能源於他正向、敢做的外顯風格^_____^
