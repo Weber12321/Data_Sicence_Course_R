@@ -1,6 +1,6 @@
 # Weber1234
-<h1>hi, I'm Weber. Nice to meet you! </h1>
-<h4>this is the link for course for data science programming at 2018 spring</h4>
+<h1>Hello, I'm Weber. I'm learning data sicence. Nice to meet you! </h1>
+<h4>This is the link for course of Data Science Programming from National Taiwan Univerity(NTU) 2018 spring</h4>
 <br/>
 
 
