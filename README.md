@@ -5,7 +5,7 @@
 <h4> Week 1</h4><br/>
 <p>
   HW_1 : 練習一些R語言基礎<br/>
-    作業連結 : https://github.com/Weber12321/Weber1234/tree/master/HW_1<br/>
+    >>>作業連結 : https://github.com/Weber12321/Weber1234/tree/master/HW_1<br/>
 1.Practice 1<br/>
     運用if-else句，並且輸入身高資料，來撰寫一個BMI計算器<br/>
 2.Practice 2<br/>
@@ -23,7 +23,7 @@
 <h4> Week 2</h4><br/>
 <p>
  HW_2 : 使用<b>rvest</b>以及<b>CSS selector</b>練習爬取網頁資訊 (Dcard主頁熱門文章為目標網址)<br/>
- 作業連結 : https://weber12321.github.io/Weber1234/HW_2/HW_2_R.html<br/>
+ >>>作業連結 : https://weber12321.github.io/Weber1234/HW_2/HW_2_R.html<br/>
  爬取內容為 :<br/>
  1. 文章標題<br/>
  2. 文章主題分類<br/>
@@ -38,7 +38,7 @@
 <h4> Week 3</h4><br/>
 <p>
  HW_3 : 練習ggplot與ggmap (北市106年度各區人口數與106年度公共圖書館位址做比較)<br/>
- 作業連結 : https://weber12321.github.io/Weber1234/HW_3/HW3_DataVisualizationRmd.html<br/>
+ >>>作業連結 : https://weber12321.github.io/Weber1234/HW_3/HW3_DataVisualizationRmd.html<br/>
  目的 : 首先匯入北市範圍為基準的地圖，再運用熱量圖作為人口數底圖，並用點陣圖標示圖書館位置以利觀察。<br/>
  參考資料來源 :<br/>
  1. 台北市各行政區人口數及戶數<https://ca.gov.taipei/News_Content.aspx?n=F98484FF6E3A5230&sms=D19E9582624D83CB&s=EE7D5719108F4026><br/>
@@ -50,7 +50,7 @@
 <h4> Week 4</h4><br/>
 <p>
     HW_4 : 練習使用woldcloud套件化文字雲 (以柯文哲臉書發文為分析對象)<br/>
-    作業連結 : https://weber12321.github.io/Weber1234/HW_4/facebookDATAwordclould.html<br/>
+    >>>作業連結 : https://weber12321.github.io/Weber1234/HW_4/facebookDATAwordclould.html<br/>
     任務目標 :<br/>
     1. 使用<i>facebook graphic api explorer</i>爬取資料，用<b>Rfacebook處理</b><br/>
     2. 使用<b>tm、NLP、結巴</b>等套件清理文本內容<br/>
@@ -69,25 +69,25 @@
 <h4> Week 5</h4><br/>
 <p>
  HW_5 : 練習使用<b>TFIDF</b> (使用柯文哲2018年臉所有發文內容為分析對象)<br>
- 作業連結 : https://weber12321.github.io/Weber1234/HW_5/HW_5.html<br/>
+ >>>作業連結 : https://weber12321.github.io/Weber1234/HW_5/HW_5.html<br/>
 </p>
 
 <h4>project 1</h4>
  <p>
  project1 : 寫一個視覺化的文本分析專題 (使用柯文哲2018年聯合報新聞為分析對象)<br>
- 作業連結 : https://weber12321.github.io/Weber1234/Project1/project1.html<br>
+ >>>作業連結 : https://weber12321.github.io/Weber1234/Project1/project1.html<br>
  寫作情況 : 自行完成<br>
  </p>
 <h4>project 2</h4>
  <p>
  project2 : 鐵達尼號罹難者建模分析 (以 Kaggle 比賽參賽者程式為對象)<br>
- 作業連結 : https://github.com/Weber12321/Weber1234/blob/master/Project%202/Group-5-Project-2.pdf<br>
+ >>>作業連結 : https://github.com/Weber12321/Weber1234/blob/master/Project%202/Group-5-Project-2.pdf<br>
  寫作情況 : 小組完成<br>
  </p>
 <h4>project 3</h4>
  <p>
  project3 : 實際用鐵達尼號練習建模 (使用課程給予的資料為建模對象)<br/>
- 作業連結 : https://weber12321.github.io/Weber1234/Project3/project_3.nb.html<br/>
+ >>>作業連結 : https://weber12321.github.io/Weber1234/Project3/project_3.nb.html<br/>
  寫作情況 : 小組完成<br/>
  遇到的問題 : <br>
  問題一 :<br/>
@@ -98,7 +98,7 @@
 <h4>project 4</h4>
  <p>
  project 4 : arules 建模練習 (以iris資料組為練習對象)<br/>
- 作業連結 : https://weber12321.github.io/Weber1234/project4/project4.html<br/>
+ >>>作業連結 : https://weber12321.github.io/Weber1234/project4/project4.html<br/>
  遇到的問題 :<br>
  問題一 :<br/>
  發現問題所在乃iris資料集的資料類型都是數值化的，而apriori不能使用數值資料判斷，<br/>
@@ -113,5 +113,5 @@
 <h4>project 5</h4>
  <p>
  project 5 : nnet建模練習 (以wine為建模練習對象)<br/>
- 作業連結 : https://weber12321.github.io/Weber1234/Project5/project.html<br/>
+ >>>作業連結 : https://weber12321.github.io/Weber1234/Project5/project.html<br/>
 </p>
