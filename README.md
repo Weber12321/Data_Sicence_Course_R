@@ -75,6 +75,11 @@
  遇到問題:<br/>
    PPT文章xpath路徑並不是完全標準，e.g.time tag就不同
 </p>
+
+<h4>project 1</h4>
+ <p>
+ 作業連結 : https://weber12321.github.io/Weber1234/Project1/project1.html
+ </p>
 <h4>project 2</h4>
  <p>
  作業連結 : https://github.com/Weber12321/Weber1234/blob/master/Project%202/Group-5-Project-2.pdf
