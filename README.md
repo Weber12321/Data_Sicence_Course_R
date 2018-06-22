@@ -55,14 +55,14 @@
     HW_4 : 練習使用woldcloud套件化文字雲 (以柯文哲臉書發文為分析對象)<br/>
     >>>作業連結 : https://weber12321.github.io/Weber1234/HW_4/facebookDATAwordclould.html<br/>
   寫作情況 : 自行完成<br>
-    任務目標 :<br/>
+    >任務目標 :<br/>
     1. 使用<i>facebook graphic api explorer</i>爬取資料，用<b>Rfacebook處理</b><br/>
     2. 使用<b>tm、NLP、結巴</b>等套件清理文本內容<br/>
     3. 使用wordclould套件繪製文字雲<br/>
-    使用資源 :<br/>
+    >使用資源 :<br/>
     1. "https://www.facebook.com/DoctorKoWJ/" <i>柯文哲市長臉書專頁</i><br/>
     2. <b>facebook graphic api explorer</b><br/>
-    遇到問題 :<br/>
+    >遇到問題 :<br/>
     1. R版本問題，slam、tm、NLP無法安裝 (解決方法 : 用installr升級)<br/>
     2. 字體問題，warning message : font family not found in Windows font database (未解決)<br/>
     3. 迴圈無法output大量資料 (未解決)<br/>
