@@ -1,3 +1,19 @@
+---
+title: "Project1"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Project1 : TFIDF練習-以聯合報柯文哲新聞為例
+
+練習TFIDF，以爬取**聯合報新聞**內容關鍵字柯文哲，為練習對象。
+由於2018資料量過大，詞頻分析僅以**五月**資料組當作內容。
+
+## 匯入套件
+```{r pack}
 # ===== personal project01
 # ===== 處理聯合報柯文哲1月至5月的文章
 # 製作tfidf(以五月為例)
@@ -18,7 +34,13 @@ library(magrittr)
 library(slam)
 library(Matrix)
 library(tidytext)
+```
 
+
+## 資料清理
+將所有資料bind一起，切開時間變數為年、月、日與時間，刪除遺漏、重複資訊。
+分割整理後資料為各五個月小資料組
+```{r dataCleaning}
 # 資料清理 
 # 匯入資料組
 setwd("/Users/Weber/Documents/GitHub/Weber1234/Project1")
@@ -55,8 +77,11 @@ New <- subset(all, all$month == "05", select = c(month, date, V1, bindtext))
 # write.table(Ko , file = "C:/Users/Weber/Documents/GitHub/NTU-CSX-DataScience--Group5/Finalproject/NewsCleaning/Ko_udn.csv", sep = ",")
 # -----------------------------
 
+```
 
-
+## 文字切詞
+以5月資料組為處理對象，刪除文章內符號與雜訊，加入自訂字典，建立TF與DF
+```{r corpus }
 # ==== 切詞
 # cor_word <- function(data){}
 docs <- Corpus(VectorSource(New$bindtext))
@@ -100,9 +125,10 @@ d.corpus <- Corpus(VectorSource(seg))
 tdm <- TermDocumentMatrix(d.corpus)
 tf <- as.matrix(tdm)
 DF <- tidy(tf)
+```
 
-
-# ---------------------
+## TFIDF
+```{r TFIDF}
 # tf-idf
 N = tdm$ncol
 tf <- apply(tdm, 2, sum)
@@ -123,8 +149,12 @@ for(x in 1:nrow(tdm)){
 
 findZeroId = as.matrix(apply(doc.tfidf, 1, sum))
 tfidfnn = doc.tfidf
-head(tfidfnn,10)
+```
 
+## 資料視覺化
+1. plot今年各月份，柯文哲的文章數量，以觀變化
+2. plot TFIDF 看五月份用詞頻率
+```{r visualization}
 # 視覺化
 # 每月文章數
 post <- data.frame(c(1:5))
@@ -150,3 +180,9 @@ ggplot(hfp.df, aes(reorder(names,high.freq), high.freq)) +
   geom_bar(stat="identity", fill = "red") + coord_flip() + 
   xlab("詞彙") + ylab("頻率") +
   ggtitle("Term frequencies")
+```
+
+## 結論
+1. 詞頻出現英文不知是不是編碼問題，切詞應該去除所有的英文符號??
+2. DF、TF、TFIDF都無法用head()顯示內容，推測可能資料量過大??
+
