@@ -92,7 +92,7 @@
  </p>
 <h2> Week 8</h2>
  <p>
- project3 : 實際用鐵達尼號練習建模 (使用課程給予的資料為建模對象)<br/>
+ project3 : 實際用鐵達尼號乘客data練習建模 (使用課程給予的資料為建模對象)<br/>
  >>>作業連結 : https://weber12321.github.io/Weber1234/Project3/project_3.nb.html<br/>
  寫作情況 : 小組完成<br/>
  遇到的問題 : <br>
