@@ -87,7 +87,7 @@
 <h2> Week 7</h2>
  <p>
  project2 : 鐵達尼號罹難者建模分析 (以 Kaggle 比賽參賽者程式為對象)<br>
- >>>作業連結 : https://github.com/Weber12321/Weber1234/blob/master/Project%202/Group-5-Project-2.pdf<br>
+ >>>作業連結 : https://github.com/Weber12321/Weber1234/blob/master/Project2/Group-5-Project-2.pdf<br>
  寫作情況 : 小組完成<br>
  </p>
 <h2> Week 8</h2>
