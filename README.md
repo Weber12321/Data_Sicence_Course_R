@@ -127,7 +127,7 @@
 <h2> 期末專題 : 選戰懶人包</h2>
 <p>
   期末專題 : 選戰懶人包 - 以台北市三大候選人(柯文哲、丁守中、姚文智)為分析對象<br/>
-  <h4> >>>作品連結 :</h4><br/>
+  <h4> >>>作品連結 :</h4>
        1. R shiny : https://dppss90008.shinyapps.io/news_shiny/<br/>
        2. PPT簡報 : https://docs.google.com/presentation/d/1p2vua3FNWMaGRWYAarCJ8WTwRFNiI9LmvhUbOLukDQY/edit?usp=sharing<br/>
   <h4>作品簡介 : </h4>
