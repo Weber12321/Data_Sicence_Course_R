@@ -8,7 +8,7 @@ This page contains all the **works** for the class ''**2018 spring Data Science 
 ## 目錄
 [資料前處理練習](#資料前處理練習)
 
-1. [Week 1 : 練習 R 語言](#week1)
+1. [Week 1 : 練習 R 語言](#Week 1 : 練習 R 語言)
 2. [Week 2 : 資料爬蟲練習](#week2)
 3. [Week 3 : 資料視覺化練習](#week3)
 4. [Week 4 : 爬蟲與視覺化小結](#week4)
