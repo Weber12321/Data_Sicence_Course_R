@@ -51,7 +51,7 @@ This page contains all my **works** for the class "**2018 spring Data Science Pr
         寫猜數字遊戲
 
 ### Week 2 : 資料爬蟲練習<a name="week2"></a>
-  作業連結 : [HW_2](https://weber12321.github.io/Weber12 34/HW_2/HW_2_R.html)    
+  作業連結 : [HW_2](https://weber12321.github.io/Weber1234/HW_2/HW_2_R.html)    
   寫作情況 : 自行完成   
   任務目標 : 使用**rvest**以及**CSS selector**練習爬取網頁資訊     
   資料來源 : [Dcard](https://www.dcard.tw/f)   
