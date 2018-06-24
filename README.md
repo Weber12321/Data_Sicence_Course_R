@@ -8,8 +8,28 @@ This is the page for my **course assignments** of  **2018 spring Data Science Pr
 
 ## 目錄
 [資料前處理練習](#資料前處理練習)
+
+1. [Week 1 : 練習 R 語言](#week1)
+2. [Week 2 : 資料爬蟲練習](#week2)
+3. [Week 3 : 資料視覺化練習](#week3)
+4. [Week 4 : 爬蟲與視覺化小結](#week4)
+5. [Week 5 : 文本分析練習](#week5)
+6. [Week 6 : 期中個人專題撰寫](#week6)
+
 [機器學習練習](#機器學習練習)
+
+7. [Week 7 : 資料科學作品分析](#week7)
+8. [Week 8 : 建模練習 :  SVM 與 GB](#week8)
+9. [Week 9 : 建模練習 : Arules](#week9)
+10. [Week 10 : 建模練習 : nnet](#week10)
+
 [期末專題](#期末專題)
+
+1. [摘要](#一、摘要)
+2. [作品連結](#二、作品連結)
+3. [作品介紹](#三、作品介紹)
+4. [結論](#四、結論)
+
 
 
 
