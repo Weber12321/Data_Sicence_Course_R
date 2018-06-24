@@ -36,8 +36,6 @@ This is the page for my **course assignments** of  **2018 spring Data Science Pr
 
 # 資料前處理練習
 ### Week 1 : 練習 R 語言
-
-  
   作業連結 : [HW_1](https://github.com/Weber12321/Weber1234/tree/master/HW_1)     
   寫作情況 : 自行完成    
   任務目標 : R 語言練習     
@@ -56,10 +54,10 @@ This is the page for my **course assignments** of  **2018 spring Data Science Pr
         寫猜數字遊戲
 
 ### Week 2 : 資料爬蟲練習 I
-  作業連結 : [HW_2](https://weber12321.github.io/Weber1234/HW_2/HW_2_R.html)
-  寫作情況 : 自行完成
-  任務目標 : 使用**rvest**以及**CSS selector**練習爬取網頁資訊  
-  資料來源 :[Dcard](https://www.dcard.tw/f)
+  作業連結 : [HW_2](https://weber12321.github.io/Weber12 34/HW_2/HW_2_R.html)    
+  寫作情況 : 自行完成   
+  任務目標 : 使用**rvest**以及**CSS selector**練習爬取網頁資訊     
+  資料來源 :[Dcard](https://www.dcard.tw/f)   
   
 	爬取 :		  
 	 1. 文章標題
@@ -71,24 +69,23 @@ This is the page for my **course assignments** of  **2018 spring Data Science Pr
    原本想用XML與xpath語法來爬取資料，不過結果不慎理想。相較之下，rvest語法簡易許多QQ
 
 ### Week 3 : 資料視覺化練習
-  作業連結 : [HW_3](https://weber12321.github.io/Weber1234/HW_3/HW3_DataVisualizationRmd.html)
-  寫作情況 : 自行完成
-  任務目標 : 使用 **ggplot**與 **ggmap** 比較人口密度與公共圖書館密度  
-  資料來源 :
-  [台北市立圖書館](https://tpml.gov.taipei/News.aspx?n=4F66F55F388033A7&sms=CFFFC938B352678A)
-   [台北市各行政區人口數及戶數]([https://ca.gov.taipei/News_Content.aspx?n=F98484FF6E3A5230&sms=D19E9582624D83CB&s=EE7D5719108F4026](https://ca.gov.taipei/News_Content.aspx?n=F98484FF6E3A5230&sms=D19E9582624D83CB&s=EE7D5719108F4026)) 
-[3碼郵遞區號與行政區中心點經緯度對照表](https://data.gov.tw/dataset/25489)
+  作業連結 : [HW_3](https://weber12321.github.io/Weber1234/HW_3/HW3_DataVisualizationRmd.html)    
+  寫作情況 : 自行完成   
+  任務目標 : 使用 **ggplot**與 **ggmap** 比較人口密度與公共圖書館密度     
+  資料來源 :   
+  [台北市立圖書館](https://tpml.gov.taipei/News.aspx?n=4F66F55F388033A7&sms=CFFFC938B352678A)    
+   [台北市各行政區人口數及戶數]([https://ca.gov.taipei/News_Content.aspx?n=F98484FF6E3A5230&sms=D19E9582624D83CB&s=EE7D5719108F4026](https://ca.gov.taipei/News_Content.aspx?n=F98484FF6E3A5230&sms=D19E9582624D83CB&s=EE7D5719108F4026))    
+[3碼郵遞區號與行政區中心點經緯度對照表](https://data.gov.tw/dataset/25489)   
 
 
 ### Week 4 : 爬蟲與視覺化小結
-
-  作業連結 : [HW_4](https://weber12321.github.io/Weber1234/HW_4/facebookDATAwordclould.html)
-  寫作情況 : 自行完成
-  任務目標 :
-  1. 使用 **facebook graphic api explorer** 與 **Rfacebook** 處理爬蟲資料
-  2. 使用 **tm、NLP、jieba** 等套件清理文本內容
-  3. 使用 **wordclould** 套件繪製文字雲
-  
+  作業連結 : [HW_4](https://weber12321.github.io/Weber1234/HW_4/facebookDATAwordclould.html)   
+  寫作情況 : 自行完成   
+  任務目標 :   
+  1. 使用 **facebook graphic api explorer** 與 **Rfacebook** 處理爬蟲資料   
+  2. 使用 **tm、NLP、jieba** 等套件清理文本內容  
+  3. 使用 **wordclould** 套件繪製文字雲   
+ 
   資料來源 : [柯文哲臉書粉絲專頁](https://www.facebook.com/DoctorKoWJ/)
   > 遇到問題 :  
 	1. R版本問題，slam、tm、NLP無法安裝 (解決方法 : 用installr升級)  
@@ -100,18 +97,18 @@ This is the page for my **course assignments** of  **2018 spring Data Science Pr
 
 ### Week 5 : 文本分析練習
 
-  作業連結 : [HW_5](https://weber12321.github.io/Weber1234/HW_5/HW_5.html)
-  寫作情況 : 自行完成
-  任務目標 : 柯文哲市長 2018 臉書分粉絲專頁發文文本分析**TF-IDF**
-  資料來源 : [柯文哲臉書粉絲專頁](https://www.facebook.com/DoctorKoWJ/)
-  > 遇到問題
+  作業連結 : [HW_5](https://weber12321.github.io/Weber1234/HW_5/HW_5.html)    
+  寫作情況 : 自行完成   
+  任務目標 : 柯文哲市長 2018 臉書分粉絲專頁發文文本分析**TF-IDF**   
+  資料來源 : [柯文哲臉書粉絲專頁](https://www.facebook.com/DoctorKoWJ/)  
+  > 遇到問題  
    切完的詞在建立詞頻矩陣步驟時，總會出現些許亂碼
 
 ### Week 6 : 期中個人專題撰寫
-  作品連結 : [Project 1](https://weber12321.github.io/Weber1234/Project1/project1.html)
-  寫作情況 : 自行完成
-  任務目標 : 撰寫柯文哲市長 2018 1-5月 聯合報新聞文本分析專題
-  資料來源 : [柯文哲聯合報](https://udn.com/search/result/2/%E6%9F%AF%E6%96%87%E5%93%B2)
+  作品連結 : [Project 1](https://weber12321.github.io/Weber1234/Project1/project1.html)   
+  寫作情況 : 自行完成   
+  任務目標 : 撰寫柯文哲市長 2018 1-5月 聯合報新聞文本分析專題   
+  資料來源 : [柯文哲聯合報](https://udn.com/search/result/2/%E6%9F%AF%E6%96%87%E5%93%B2)   
   > 遇到問題
       1.  詞頻出現英文不知是不是編碼問題，切詞應該去除所有的英文符號
       2.  DF、TF、TFIDF都無法用head()顯示內容，推測資料量過大無法顯示
@@ -121,36 +118,36 @@ This is the page for my **course assignments** of  **2018 spring Data Science Pr
 # 機器學習練習
 
 ### Week 7 : 資料科學作品分析
-作業連結 :  [project 2](https://github.com/Weber12321/Weber1234/blob/master/Project2/Group-5-Project-2.pdf)
-寫作情況 : 小組完成
-任務目標 : 鐵達尼號罹難者建模 - **作品分析** (以 Kaggle 比賽參賽者程式為對象)  
+作業連結 :  [project 2](https://github.com/Weber12321/Weber1234/blob/master/Project2/Group-5-Project-2.pdf)   
+寫作情況 : 小組完成   
+任務目標 : 鐵達尼號罹難者建模 - **作品分析** (以 Kaggle 比賽參賽者程式為對象)     
 資料來源 : [Titanic: 2nd degree families and majority voting](https://www.kaggle.com/erikbruin/titanic-2nd-degree-families-and-majority-voting)
 
 ### Week 8 : 建模練習 :  SVM 與 GB
-作業連結 :  [project 3](https://weber12321.github.io/Weber1234/Project3/project_3.nb.html)
-寫作情況 : 小組完成
-任務目標 : 使用**鐵達尼號乘客原始資料**練習建模 
-資料來源 : [Titanic](https://github.com/NTU-CSX-DataScience/106-2RSampleCode/tree/master/week_8/task_8)
+作業連結 :  [project 3](https://weber12321.github.io/Weber1234/Project3/project_3.nb.html)   
+寫作情況 : 小組完成   
+任務目標 : 使用**鐵達尼號乘客原始資料**練習建模    
+資料來源 : [Titanic](https://github.com/NTU-CSX-DataScience/106-2RSampleCode/tree/master/week_8/task_8)   
   
 >遇到的問題 :  
 無法清楚得知body確切意義，不過可以存訓練資料中看出，有明確被標出body實質資訊的乘客，都沒有**生還**  
 顯示body的重要性十足，已具有成為預測參數的資格。初步猜測body為遺體資訊，具體規律無從得知。
 
 ### Week 9 : 建模練習 : Arules
-作業連結 :  [project 4](https://weber12321.github.io/Weber1234/project4/project4.html)
-寫作情況 : 小組完成
-任務目標 : 使用R資料集 **iris 資料** 練習建模 
+作業連結 :  [project 4](https://weber12321.github.io/Weber1234/project4/project4.html)    
+寫作情況 : 小組完成   
+任務目標 : 使用R資料集 **iris 資料** 練習建模    
 >遇到的問題 :  
-	1. iris資料集的資料類型都是數值化的，而apriori不能使用數值資料判斷， 因此撰寫函數，將所有資料由小而大分成三個區間，並且類別化，從而得到結果。  
-	2. 另外一個問題在於apriori()方法中Appearence中也遇到錯誤，原本以為真的是鬼打牆，但是結果竟然是此方法 中不能有任何縮排==“刪去縮排就能跑出結果。  
-結果 :  
+	1. iris資料集的資料類型都是數值化的，而apriori不能使用數值資料判斷， 因此撰寫函數，將所有資料由小而大分成三個區間，並且類別化，從而得到結果。 
+	2. 另外一個問題在於apriori()方法中Appearence中也遇到錯誤，原本以為真的是鬼打牆，但是結果竟然是此方法 中不能有任何縮排==“刪去縮排就能跑出結果。     
+結果 :    
 	iris資料組其實蠻一翻兩瞪眼的，資料間confidence都很高，甚至有一些到10，因此我們得出結論是，這三種花卉(setosa、versicolor、virginica)的生物特性其實分類也很直觀，不同種類有相異的長寬區間，所以出來的結果這麼極端。
 
 ### Week 10 : 建模練習 : nnet
-作業連結 :  [project 5](https://weber12321.github.io/Weber1234/Project5/project.html)
-寫作情況 : 小組完成
-任務目標 : 使用 **wine 資料** 練習建模 
-資料來源 : [wine](https://rdrr.io/cran/rattle.data/man/wine.html)
+作業連結 :  [project 5](https://weber12321.github.io/Weber1234/Project5/project.html)  
+寫作情況 : 小組完成   
+任務目標 : 使用 **wine 資料** 練習建模   
+資料來源 : [wine](https://rdrr.io/cran/rattle.data/man/wine.html)  
 
 
 
@@ -161,7 +158,7 @@ This is the page for my **course assignments** of  **2018 spring Data Science Pr
 依據2018年1-5月四大報新聞媒體文章、Facebook社群做文本分析與情緒分析，來探究台北市三大候選人(柯文哲、丁守中、姚文智)的關注議題、受眾(社群)有感議題、以及媒體對於這三位候選人的關注議題，與報導是否有偏頗傾向。
 
 ### 二、作品連結 :
-寫作情況 : 小組完成
+寫作情況 : 小組完成   
 1. R shiny : [https://dppss90008.shinyapps.io/news_shiny/](https://dppss90008.shinyapps.io/news_shiny/)  
 2. PPT簡報 : [https://docs.google.com/presentation/d/1p2vua3FNWMaGRWYAarCJ8WTwRFNiI9LmvhUbOLukDQY/edit?usp=sharing](https://docs.google.com/presentation/d/1p2vua3FNWMaGRWYAarCJ8WTwRFNiI9LmvhUbOLukDQY/edit?usp=sharing)  
 
@@ -209,7 +206,7 @@ This is the page for my **course assignments** of  **2018 spring Data Science Pr
 ﹒長條圖  
 
 #### 6. 專題流程
-```mermaid
+```{r mermaid, echo = FALSE }
 graph TB
 A[議題設定] --> B[資料收集 : 媒體與粉專資料爬蟲 ]
 B --> C[資料清理]
