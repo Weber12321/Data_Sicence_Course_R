@@ -3,7 +3,7 @@
 我正在學習資料科學，這是我2018年在**台灣大學**修習 「資料科學程式設計」的**作品頁**。
 
 Hello, I'm Weber. I'm learning data science. Nice to meet you! 
-This is the page for my **course assignments** of  **2018 spring Data Science Programming** of National Taiwan University (NTU)
+This page contains all the **works** for the class ''**2018 spring Data Science Programming**'' at National Taiwan University (NTU)
 
 ## 目錄
 [資料前處理練習](#資料前處理練習)
