@@ -5,7 +5,6 @@
 Hello, I'm Weber. I'm learning data science. Nice to meet you! 
 This is the page for my **course assignments** of  **2018 spring Data Science Programming** of National Taiwan University (NTU)
 
-
 ## 目錄
 [資料前處理練習](#資料前處理練習)
 
@@ -29,10 +28,6 @@ This is the page for my **course assignments** of  **2018 spring Data Science Pr
 2. [作品連結](#二、作品連結)
 3. [作品介紹](#三、作品介紹)
 4. [結論](#四、結論)
-
-
-
-
 
 # 資料前處理練習
 ### Week 1 : 練習 R 語言
@@ -67,7 +62,10 @@ This is the page for my **course assignments** of  **2018 spring Data Science Pr
 	 5. 文章回應數
  >  遇到問題 :  
    原本想用XML與xpath語法來爬取資料，不過結果不慎理想。相較之下，rvest語法簡易許多QQ
-
+   
+     
+     
+       
 ### Week 3 : 資料視覺化練習
   作業連結 : [HW_3](https://weber12321.github.io/Weber1234/HW_3/HW3_DataVisualizationRmd.html)    
   寫作情況 : 自行完成   
@@ -94,7 +92,6 @@ This is the page for my **course assignments** of  **2018 spring Data Science Pr
 	4. Rjava 無法安裝
 	5. segmentCN 無法使用
  
-
 ### Week 5 : 文本分析練習
 
   作業連結 : [HW_5](https://weber12321.github.io/Weber1234/HW_5/HW_5.html)    
@@ -149,8 +146,6 @@ This is the page for my **course assignments** of  **2018 spring Data Science Pr
 任務目標 : 使用 **wine 資料** 練習建模   
 資料來源 : [wine](https://rdrr.io/cran/rattle.data/man/wine.html)  
 
-
-
 # 期末專題
 ## 選戰懶人包 - 以2018台北市長候選人為分析對象
 ### 一、 摘要 :
@@ -161,7 +156,6 @@ This is the page for my **course assignments** of  **2018 spring Data Science Pr
 寫作情況 : 小組完成   
 1. R shiny : [https://dppss90008.shinyapps.io/news_shiny/](https://dppss90008.shinyapps.io/news_shiny/)  
 2. PPT簡報 : [https://docs.google.com/presentation/d/1p2vua3FNWMaGRWYAarCJ8WTwRFNiI9LmvhUbOLukDQY/edit?usp=sharing](https://docs.google.com/presentation/d/1p2vua3FNWMaGRWYAarCJ8WTwRFNiI9LmvhUbOLukDQY/edit?usp=sharing)  
-
 
 ### 三、作品介紹 :
 
@@ -207,12 +201,7 @@ This is the page for my **course assignments** of  **2018 spring Data Science Pr
 
 #### 6. 專題流程
 
-graph TB;
- A[議題設定]-->B[資料收集:媒體與粉專資料爬蟲];
- B-->C[資料清理];
- C-->D[資料分析];
- D-->E(資料呈現:文字雲、LDA、情緒分析);
-
+ 議題設定 --> 資料收集 : 媒體與粉專資料爬蟲--> 資料清理 --> 資料分析 --> 資料呈現 : 文字雲、LDA、情緒分析
 
 #### 7. 結論
 
