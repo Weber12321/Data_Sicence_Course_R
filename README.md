@@ -206,13 +206,12 @@ This is the page for my **course assignments** of  **2018 spring Data Science Pr
 ﹒長條圖  
 
 #### 6. 專題流程
-```{r mermaid, echo = FALSE }
-graph TB
-A[議題設定] --> B[資料收集 : 媒體與粉專資料爬蟲 ]
-B --> C[資料清理]
-C --> D[資料分析]
-D --> E(資料呈現 : 文字雲、LDA、情緒分析 )
-```
+
+graph TB;
+A[議題設定] --> B[資料收集 : 媒體與粉專資料爬蟲 ];
+B --> C[資料清理];
+C --> D[資料分析];
+D --> E(資料呈現 : 文字雲、LDA、情緒分析 );
 
 #### 7. 結論
 
