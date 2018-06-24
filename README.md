@@ -30,7 +30,7 @@ This page contains all the **works** for the class ''**2018 spring Data Science 
 4. [結論](#四、結論)
 
 # 資料前處理練習
-### Week 1 : 練習 R 語言
+### Week 1 : 練習 R 語言<a name="W"></a>
   作業連結 : [HW_1](https://github.com/Weber12321/Weber1234/tree/master/HW_1)     
   寫作情況 : 自行完成    
   任務目標 : R 語言練習     
