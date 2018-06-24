@@ -1,8 +1,10 @@
 # 資料科學程式設計 Data Science Programming
-我是**Weber**，很高興認識你。 
-我正在學習資料科學，這是我2018年在**台灣大學**修習 「資料科學程式設計」的**作品頁**。
+我是**Weber**，很高興認識你。   
+我正在學習資料科學，    
+這是我2018年在**台灣大學**修習 「資料科學程式設計」的**作品頁**。   
 
-Hello, I'm Weber. I'm learning data science. Nice to meet you! 
+Hello, I'm Weber.  Nice to meet you!    
+I'm learning data science.    
 This page contains all the **works** for the class ''**2018 spring Data Science Programming**'' at National Taiwan University (NTU)
 
 ## 目錄
