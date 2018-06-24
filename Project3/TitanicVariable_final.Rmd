@@ -1,0 +1,183 @@
+---
+title: "TitanicVariable"
+author: "group5"
+date: "2018/6/25"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Read the titanicTrain data and store it in train
+```{r}
+library(magrittr)
+library(ggplot2)
+train <- read.csv("titanicTrain.csv")
+train <- train[c(1:1000),]
+# Train data 上面的NA
+str(train)
+sapply(train, function(x) {sum(is.na(x))})
+```
+
+## Pclass Variable
+```{r}
+# Pclass
+# 不同船艙等級是否與死亡有關
+train$survived <- train$survived %>% as.factor()
+
+ggplot(train[!is.na(train$survived),], aes(x = pclass, fill = survived )) +
+  geom_bar(stat='count', position='dodge') + labs(x = 'Train data') +
+  theme(legend.position="none") + theme_grey()
+# 結果: 低等船艙(P3)死亡率較高
+```
+
+## Sex Variable
+```{r}
+## 性別是否與死亡有關
+ggplot(train[!is.na(train$survived),], aes(x = sex, fill = survived)) +
+  geom_bar(stat='count', position='dodge') + theme_grey() +
+  labs(x = 'Train data') +
+  geom_label(stat='count', aes(label=..count..))
+# 結果: 男性死亡數比較多
+```
+
+## Pclass and Sex Variable
+```{r}
+ggplot(train[!is.na(train$survived),], aes(x = pclass, fill = survived)) +
+  geom_bar(stat='count', position='stack') +
+  labs(x = 'Train data ', y= "Count") + facet_grid(.~sex) +
+  theme(legend.position="none") + theme_grey()
+```
+
+
+## Embarked Variable
+```{r}
+train$embarked <- train$embarked %>% as.factor
+summary(train$embarked[train$survived==0])
+summary(train$embarked[train$survived==1])
+embark <- cbind(summary(train$embarked[train$survived==0]),summary(train$embarked[train$survived==1]))
+embark <- embark[-1,] %>% t
+rownames(embark) <- c("0","1")
+
+barplot(embark,col=c("gray","black"),main="embarked variable",beside=TRUE,ylab="counts")
+legend("topright", inset=.02,title="Survive",
+       c("0","1"), fill=c("gray","black"), horiz=TRUE, cex=0.8)
+# 結果: 看起來從Q及S離港的人存活率較低一點
+```
+
+## family = sibsp + parch + 1
+```{r}
+# 一個人旅行及全家(結伴)搭船死亡數
+family <- train$parch + train$sibsp + 1
+train <- cbind(train,family)
+
+ps0 <- train$family[train$survived==0] %>% as.factor %>% summary
+ps1 <- train$family[train$survived==1] %>% as.factor %>% summary %>% c(.,0)
+family <- rbind(ps0,ps1)
+rm(ps0)
+rm(ps1)
+
+barplot(family,col=c("gray","black"),main="family",beside=TRUE,ylab="counts",xlab="Number of people")
+legend("topright", inset=.02,title="Survive",
+       c("0","1"), fill=c("gray","black"), horiz=TRUE, cex=0.8)
+# 結果: 單身漢死比較多
+```
+
+
+```{r}
+#load data
+train <- read.csv("titanicTrain.csv", stringsAsFactors = F, na.strings = c("NA", ""))
+test <- read.csv("titanicQuestion.csv", stringsAsFactors = F, na.strings = c("NA", ""))
+train <- train[c(1:1000),]
+#bind the data
+all <- rbind(train, test)
+#as factor
+all$sex <- as.factor(all$sex)
+all$survived <- as.factor(all$survived)
+```
+
+##　Boat Variable
+```{r}
+#plot b1, find out that the survived condition of "every boat"
+#first we rename all boats with number 1 to 28
+#tranfer original boat numbers to 1:27, 28 refer to NA  
+all$boat[all$boat == "5 7"] <- "17"
+all$boat[all$boat == "5 9"] <- "18"
+all$boat[all$boat == "8 10"] <- "19"
+all$boat[all$boat == "13 15"] <- "20"
+all$boat[all$boat == "13 15 B"] <- "21"
+all$boat[all$boat == "15 16"] <- "22"
+all$boat[all$boat == "A"] <- "23"
+all$boat[all$boat == "B"] <- "24"
+all$boat[all$boat == "C"] <- "25"
+all$boat[all$boat == "D"] <- "26"
+all$boat[all$boat == "C D"] <- "27"
+all$boat[is.na(all$boat)] <- "28"
+
+#escape = 1 refer to the refugee who successfully took on boat
+all$escape[all$boat != "28"] <- "1"
+all$escape[all$boat == "28"] <- "0"
+#see if taking boat is highly related survived
+b1 <- ggplot(all[!is.na(all$survived),], aes(x = escape, fill = survived)) +
+  geom_bar(stat='count', position='dodge') + theme_grey() +
+  labs(x = 'escape from ship') +
+  geom_label(stat='count', aes(label=..count..))
+b1
+# 結果: 搭上船的大多都會活
+```
+
+```{r}
+#plot b2, see if there's anyone who survived without boat
+#subset of those who took on boat
+survived_boat <- subset(all, all$boat != "28")
+#see if there anyone who took on boat and didn't survive 
+b2 <- ggplot(survived_boat[!is.na(survived_boat$survived),], aes(x = boat, fill = survived)) +
+  geom_bar(stat='count', position='dodge') +
+  labs(x = 'boat_survive') + theme_grey()
+b2
+```
+
+## Body variable
+```{r}
+# 有屍體紀錄
+#replace those data to "0"(body info is NA) and "1"(body info isn't NA)
+all$body[is.na(all$body)] <- "0"
+all$body[all$body != "0"] <- "1"
+all$body <- as.factor(all$body)
+#=== guessing there is something to do with dead people
+
+#set a subset of those which get the body's value 
+have_body <- subset(all, all$body != "0")
+#find out if those data with body info are highly related to death
+bo <- ggplot(have_body[!is.na(have_body$survived),], aes(x = body, fill = survived)) +
+  geom_bar(stat='count', position='dodge') +
+  labs(x = 'body_info') + theme_grey()
+bo
+
+## 有body的人全死!
+```
+
+```{r}
+#=== there isn't any survivor has body data
+#=== regarding from bo, it seems those who have body info all died
+
+#so we want to find out the distribution of survived and body
+bo_2 <-ggplot(all[!is.na(all$survived),], aes(x = body, fill = survived)) +
+  geom_bar(stat='count', position='dodge') + theme_grey() +
+  labs(x = 'body with death') +
+  geom_label(stat='count', aes(label=..count..))
+bo_2
+#=== the outcomes of these 2 plots reveal that those who got body value was definitely dead
+
+
+```
+
+
+
+
+
+
+
+
+
