@@ -57,7 +57,7 @@ This is the page for my **course assignments** of  **2018 spring Data Science Pr
   作業連結 : [HW_2](https://weber12321.github.io/Weber12 34/HW_2/HW_2_R.html)    
   寫作情況 : 自行完成   
   任務目標 : 使用**rvest**以及**CSS selector**練習爬取網頁資訊     
-  資料來源 :[Dcard](https://www.dcard.tw/f)   
+  資料來源 : [Dcard](https://www.dcard.tw/f)   
   
 	爬取 :		  
 	 1. 文章標題
@@ -74,7 +74,7 @@ This is the page for my **course assignments** of  **2018 spring Data Science Pr
   任務目標 : 使用 **ggplot**與 **ggmap** 比較人口密度與公共圖書館密度     
   資料來源 :   
   [台北市立圖書館](https://tpml.gov.taipei/News.aspx?n=4F66F55F388033A7&sms=CFFFC938B352678A)    
-   [台北市各行政區人口數及戶數]([https://ca.gov.taipei/News_Content.aspx?n=F98484FF6E3A5230&sms=D19E9582624D83CB&s=EE7D5719108F4026](https://ca.gov.taipei/News_Content.aspx?n=F98484FF6E3A5230&sms=D19E9582624D83CB&s=EE7D5719108F4026))    
+   [台北市各行政區人口數及戶數](https://ca.gov.taipei/News_Content.aspx?n=F98484FF6E3A5230&sms=D19E9582624D83CB&s=EE7D5719108F4026)    
 [3碼郵遞區號與行政區中心點經緯度對照表](https://data.gov.tw/dataset/25489)   
 
 
@@ -199,7 +199,7 @@ This is the page for my **course assignments** of  **2018 spring Data Science Pr
 
 #### 5. 資料呈現方式 :
 
-1. R shiny : 
+1. R shiny :   
 ﹒趨勢圖  
 ﹒盒狀圖  
 ﹒文字雲  
