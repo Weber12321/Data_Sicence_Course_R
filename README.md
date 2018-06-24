@@ -38,9 +38,9 @@ This is the page for my **course assignments** of  **2018 spring Data Science Pr
 ### Week 1 : 練習 R 語言
 
   
-  作業連結 : [HW_1](https://github.com/Weber12321/Weber1234/tree/master/HW_1)
-  寫作情況 : 自行完成
-  任務目標 : R 語言練習
+  作業連結 : [HW_1](https://github.com/Weber12321/Weber1234/tree/master/HW_1)     
+  寫作情況 : 自行完成    
+  任務目標 : R 語言練習     
   
     1. Practice 1
         運用if-else句，並且輸入身高資料，來撰寫一個BMI計算器
