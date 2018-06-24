@@ -1,0 +1,106 @@
+---
+title: "hw7"
+output: html_notebook
+---
+
+
+
+```{r}
+library(httr)
+library(jsonlite)
+library(dplyr)
+
+furl <- 
+ "https://graph.facebook.com/v2.11/init.kobeengineer?fields=posts.limit(100)&access_token=EAACEdEose0cBADPPnq5ZAcKsH6WXeFRVyuW3W02kQotw1mcspZArWZA5mhEZCSEFPUw95g0ZCBuK37KgsR7T9LMo3hq2swzHoMgyft17ttn3TilL56kPaWsp8Su5855AeXoh2jZBK0BDLKCcTInjoihsZB2V0UP2GLmdcNtlqTG1hGKT17rjfM0foGdbdDKvfJHX8uRIZBFBqAZDZD"
+
+fbtext <- fromJSON(content(GET(furl), "text"))
+fbpost <- fbtext$posts$data
+
+nexturl <- fbtext$posts$paging$"next"
+
+
+for( i in 1:20) {
+  print(i)
+  nexttext <- fromJSON(content(GET(nexturl), "text"))
+  nextpost <- as.data.frame(nexttext$data)
+  copost <- bind_rows(fbpost, nextpost)
+  nexturl <- nexttext$paging$"next"
+  if(is.null(nexturl) == TRUE) {
+    break
+  }
+}
+
+
+reurl <- 
+ "https://graph.facebook.com/v3.0/kobeengineer?fields=%20%20%20posts.as(like)%7Breactions.type(LIKE).limit(0).summary(true)%7D%2C%20%20%20posts.as(love)%7Breactions.type(LOVE).limit(0).summary(true)%7D%2C%20%20%20posts.as(wow)%7Breactions.type(WOW).limit(0).summary(true)%7D%2C%20%20%20posts.as(haha)%7Breactions.type(HAHA).limit(0).summary(true)%7D%2C%20%20%20posts.as(sad)%7Breactions.type(SAD).limit(0).summary(true)%7D%2C%20%20%20posts.as(angry)%7Breactions.type(ANGRY).limit(0).summary(true)%7D%2C%20%20%20posts.as(thankful)%7Breactions.type(THANKFUL).limit(0).summary(true)%7D&access_token=EAACEdEose0cBAGRbL2Cg1MiEzew0ymvsTJa3LOhDSSdY443eoGxtN8QQ5V9GqTtnuz7AkToXZBr7vIpvYUZChZBGm8wDKpUms0e98cbItPdrJpTfZBR6rL5dBsye5W9FrpupaoEoW8wFFZAkygqyL2XUWRweDo9IEeZBZAuP5bpfWIjveZBVW6YxtTXDgSZC0doN9QnwXIzA0TQZDZD"
+
+retext <- fromJSON(content(GET(reurl), "text"))
+likedata <- retext$like$data
+lovedata <- retext$love$data
+wowdata  <- retext$wow$data
+hahadata <- retext$haha$data
+saddata  <- retext$sad$data
+angrdata <- retext$angry$data
+thandata <- retext$thankful$data
+
+next_likeurl <- retext$like$paging$"next"
+next_loveurl <- retext$love$paging$"next"
+next_wowurl  <- retext$wow$paging$"next"
+next_hahaurl <- retext$haha$paging$"next"
+next_sadurl <- retext$sad$paging$"next"
+next_angrurl <- retext$angry$paging$"next"
+next_thanurl <- retext$thankful$paging$"next"
+
+
+for( i in 1:20) {
+  print(i)
+  liketext <- fromJSON(content(GET(next_likeurl), "text"))
+  lovetext <- fromJSON(content(GET(next_loveurl), "text"))
+  wowtext <- fromJSON(content(GET(next_wowurl), "text"))
+  hahatext <- fromJSON(content(GET(next_hahaurl), "text"))
+  sadtext <- fromJSON(content(GET(next_sadurl), "text"))
+  angrtext <- fromJSON(content(GET(next_angrurl), "text"))
+  thantext <- fromJSON(content(GET(next_thanurl), "text"))
+  
+  like_data <- liketext$data
+  love_data <- lovetext$data
+  wow_data  <- wowtext$data
+  haha_data <- hahatext$data
+  sad_data  <- sadtext$data
+  angr_data <- angrtext$data
+  than_data <- angrtext$data
+  
+ 
+  like <- bind_rows(likedata, like_data)
+  love <- bind_rows(lovedata, love_data)
+  wow  <- bind_rows(wowdata, wow_data)
+  haha <- bind_rows(hahadata, haha_data)
+  sad <- bind_rows(saddata, sad_data)
+  angr <- bind_rows(angrdata, angr_data)
+  than <- bind_rows(thandata, than_data)
+  
+  next_likeurl <- liketext$paging$"next"
+  next_loveurl <- lovetext$paging$"next"
+  next_wowurl  <- wowtext$paging$"next"
+  next_hahaurl <- hahatext$paging$"next"
+  next_sadurl <-  sadtext$paging$"next"
+  next_angrurl <- angrtext$paging$"next"
+  next_thanurl <- thantext$paging$"next"
+  
+  
+  if(is.null(next_likeurl,  next_loveurl, next_wowurl, next_hahaurl, next_sadurl, next_angrurl, next_thanurl) == TRUE) {
+    break
+  }
+}
+
+
+typedata <- cbind(likedata, lovedata, wowdata, hahadata, saddata, angrdata, thandata)
+
+next_retext <- retext$
+
+
+
+
+```
+
+
