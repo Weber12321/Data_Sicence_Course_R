@@ -5,7 +5,7 @@
 
 Hello, I'm Weber.  Nice to meet you!    
 I'm learning data science.    
-This page contains all the **works** for the class ''**2018 spring Data Science Programming**'' at National Taiwan University (NTU)
+This page contains all  **works** for the class ''**2018 spring Data Science Programming**'' at National Taiwan University (NTU)
 
 ## 目錄
 [資料前處理練習](#資料前處理練習)
