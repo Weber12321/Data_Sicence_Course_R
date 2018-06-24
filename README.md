@@ -8,7 +8,7 @@ This page contains all the **works** for the class ''**2018 spring Data Science 
 ## 目錄
 [資料前處理練習](#資料前處理練習)
 
-1. [Week 1 : 練習 R 語言](#Week1)
+1. [Week 1 : 練習 R 語言](#week1)
 2. [Week 2 : 資料爬蟲練習](#week2)
 3. [Week 3 : 資料視覺化練習](#week3)
 4. [Week 4 : 爬蟲與視覺化小結](#week4)
@@ -24,10 +24,10 @@ This page contains all the **works** for the class ''**2018 spring Data Science 
 
 [期末專題](#期末專題)
 
-1. [摘要](#一、摘要)
-2. [作品連結](#二、作品連結)
-3. [作品介紹](#三、作品介紹)
-4. [結論](#四、結論)
+1. [摘要](摘要)
+2. [作品連結](#作品連結)
+3. [作品介紹](#作品介紹)
+4. [結論](#結論)
 
 # 資料前處理練習
 ### Week 1 : 練習 R 語言<a name="Week1"></a>
@@ -48,7 +48,7 @@ This page contains all the **works** for the class ''**2018 spring Data Science 
         撰寫閏年判斷器
         寫猜數字遊戲
 
-### Week 2 : 資料爬蟲練習 I
+### Week 2 : 資料爬蟲練習<a name="week2"></a>
   作業連結 : [HW_2](https://weber12321.github.io/Weber12 34/HW_2/HW_2_R.html)    
   寫作情況 : 自行完成   
   任務目標 : 使用**rvest**以及**CSS selector**練習爬取網頁資訊     
@@ -66,7 +66,7 @@ This page contains all the **works** for the class ''**2018 spring Data Science 
      
      
        
-### Week 3 : 資料視覺化練習
+### Week 3 : 資料視覺化練習<a name="week3"></a>
   作業連結 : [HW_3](https://weber12321.github.io/Weber1234/HW_3/HW3_DataVisualizationRmd.html)    
   寫作情況 : 自行完成   
   任務目標 : 使用 **ggplot**與 **ggmap** 比較人口密度與公共圖書館密度     
@@ -76,7 +76,7 @@ This page contains all the **works** for the class ''**2018 spring Data Science 
 [3碼郵遞區號與行政區中心點經緯度對照表](https://data.gov.tw/dataset/25489)   
 
 
-### Week 4 : 爬蟲與視覺化小結
+### Week 4 : 爬蟲與視覺化小結<a name="week4"></a>
   作業連結 : [HW_4](https://weber12321.github.io/Weber1234/HW_4/facebookDATAwordclould.html)   
   寫作情況 : 自行完成   
   任務目標 :   
@@ -92,7 +92,7 @@ This page contains all the **works** for the class ''**2018 spring Data Science 
 	4. Rjava 無法安裝
 	5. segmentCN 無法使用
  
-### Week 5 : 文本分析練習
+### Week 5 : 文本分析練習<a name="week5"></a>
 
   作業連結 : [HW_5](https://weber12321.github.io/Weber1234/HW_5/HW_5.html)    
   寫作情況 : 自行完成   
@@ -101,7 +101,7 @@ This page contains all the **works** for the class ''**2018 spring Data Science 
   > 遇到問題  
    切完的詞在建立詞頻矩陣步驟時，總會出現些許亂碼
 
-### Week 6 : 期中個人專題撰寫
+### Week 6 : 期中個人專題撰寫<a name="week6"></a>
   作品連結 : [Project 1](https://weber12321.github.io/Weber1234/Project1/project1.html)   
   寫作情況 : 自行完成   
   任務目標 : 撰寫柯文哲市長 2018 1-5月 聯合報新聞文本分析專題   
@@ -114,13 +114,13 @@ This page contains all the **works** for the class ''**2018 spring Data Science 
 
 # 機器學習練習
 
-### Week 7 : 資料科學作品分析
+### Week 7 : 資料科學作品分析<a name="week7"></a>
 作業連結 :  [project 2](https://github.com/Weber12321/Weber1234/blob/master/Project2/Group-5-Project-2.pdf)   
 寫作情況 : 小組完成   
 任務目標 : 鐵達尼號罹難者建模 - **作品分析** (以 Kaggle 比賽參賽者程式為對象)     
 資料來源 : [Titanic: 2nd degree families and majority voting](https://www.kaggle.com/erikbruin/titanic-2nd-degree-families-and-majority-voting)
 
-### Week 8 : 建模練習 :  SVM 與 GB
+### Week 8 : 建模練習 :  SVM 與 GB<a name="week8"></a>
 作業連結 :  [project 3](https://weber12321.github.io/Weber1234/Project3/project_3.nb.html)   
 寫作情況 : 小組完成   
 任務目標 : 使用**鐵達尼號乘客原始資料**練習建模    
@@ -130,7 +130,7 @@ This page contains all the **works** for the class ''**2018 spring Data Science 
 無法清楚得知body確切意義，不過可以存訓練資料中看出，有明確被標出body實質資訊的乘客，都沒有**生還**  
 顯示body的重要性十足，已具有成為預測參數的資格。初步猜測body為遺體資訊，具體規律無從得知。
 
-### Week 9 : 建模練習 : Arules
+### Week 9 : 建模練習 : Arules<a name="week9"></a>
 作業連結 :  [project 4](https://weber12321.github.io/Weber1234/project4/project4.html)    
 寫作情況 : 小組完成   
 任務目標 : 使用R資料集 **iris 資料** 練習建模    
@@ -140,7 +140,7 @@ This page contains all the **works** for the class ''**2018 spring Data Science 
 結果 :    
 	iris資料組其實蠻一翻兩瞪眼的，資料間confidence都很高，甚至有一些到10，因此我們得出結論是，這三種花卉(setosa、versicolor、virginica)的生物特性其實分類也很直觀，不同種類有相異的長寬區間，所以出來的結果這麼極端。
 
-### Week 10 : 建模練習 : nnet
+### Week 10 : 建模練習 : nnet<a name="week10"></a>
 作業連結 :  [project 5](https://weber12321.github.io/Weber1234/Project5/project.html)  
 寫作情況 : 小組完成   
 任務目標 : 使用 **wine 資料** 練習建模   
@@ -148,36 +148,36 @@ This page contains all the **works** for the class ''**2018 spring Data Science 
 
 # 期末專題
 ## 選戰懶人包 - 以2018台北市長候選人為分析對象
-### 一、 摘要 :
+### 一、 摘要 :<a name="摘要"></a>
 
 依據2018年1-5月四大報新聞媒體文章、Facebook社群做文本分析與情緒分析，來探究台北市三大候選人(柯文哲、丁守中、姚文智)的關注議題、受眾(社群)有感議題、以及媒體對於這三位候選人的關注議題，與報導是否有偏頗傾向。
 
-### 二、作品連結 :
+### 二、作品連結 :<a name="作品連結"></a>
 寫作情況 : 小組完成   
 1. R shiny : [https://dppss90008.shinyapps.io/news_shiny/](https://dppss90008.shinyapps.io/news_shiny/)  
 2. PPT簡報 : [https://docs.google.com/presentation/d/1p2vua3FNWMaGRWYAarCJ8WTwRFNiI9LmvhUbOLukDQY/edit?usp=sharing](https://docs.google.com/presentation/d/1p2vua3FNWMaGRWYAarCJ8WTwRFNiI9LmvhUbOLukDQY/edit?usp=sharing)  
 
-### 三、作品介紹 :
+### 三、作品介紹 :<a name="作品介紹"></a>
 
-#### 1. 選題動機 :
+#### 1. 選題動機<a name="選題動機"></a>
 
 1. 協助公眾認識候選人所關心的議題  
 2. 比較四大報如何報導台北市三位候選人  
 3. 公眾在社群平台對於三位候選人的討論度  
 
-#### 2. 預期得到結果 :
+#### 2. 預期得到結果<a name="預期得到結果"></a>
 
 1. 從情緒分析結果來看，四大報對於各個候選人的報導是否有所偏頗？  
 2. 報紙報導的候選人關注議題與候選人本身關注議題是否相關？  
 3. 公眾偏好以及強烈有感的議題為何？  
 
-#### 3. 資料蒐集 :
+#### 3. 資料蒐集<a name="資料蒐集"></a>
 
 1. 蒐集蘋果日報、自由時報、聯合報網站 1月至5月 有關於柯文哲、丁守中、姚文智的新聞  
 2. 蒐集中國時報報系1月至5月有關於柯文哲、丁守中、姚文智的平面報導  
 3. 蒐集柯文哲、丁守中、姚文智從今年1月至今的臉書發文與每則發文的分享量、按讚量等資訊  
 
-#### 4. 資料處理與預期呈現
+#### 4. 資料處理與預期呈現<a name="資料處理與預期呈現"></a>
 
 1. 四大報文本 :  
 ﹒將1月至5月的新聞文本  
@@ -191,7 +191,7 @@ This page contains all the **works** for the class ''**2018 spring Data Science 
 ﹒臉書文章按讚量  
 ﹒與網民情緒量的趨勢呈現  
 
-#### 5. 資料呈現方式 :
+#### 5. 資料呈現方式<a name="資料呈現方式"></a>
 
 1. R shiny :   
 ﹒趨勢圖  
@@ -199,11 +199,11 @@ This page contains all the **works** for the class ''**2018 spring Data Science 
 ﹒文字雲  
 ﹒長條圖  
 
-#### 6. 專題流程
+#### 6. 專題流程<a name="專題流程"></a>
 
  議題設定 --> 資料收集 : 媒體與粉專資料爬蟲--> 資料清理 --> 資料分析 --> 資料呈現 : 文字雲、LDA、情緒分析
 
-#### 7. 結論
+### 四、結論<a name="結論"></a>
 
 分析完所有數值資料，用一句話形容候選人 :  
 1. 柯文哲 : 媒體寵兒，有做事然後會希望讓大家看到的人，務實的事務官形象。  
