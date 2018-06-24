@@ -128,11 +128,12 @@
 <p>
   <h5> 摘要 : </h5>
     <p>
-    依據新聞媒體文章、Facebook社群做文本分析與情緒分析，來探究台北市三大候選人(柯文哲、丁守中、姚文智)的關注議題、受眾(社群)有感議題、以及媒體對於這三位候選人的關注 議題，與報導是否有偏頗傾向。
+    依據2018年1-5月新聞媒體文章、Facebook社群做文本分析與情緒分析，來探究台北市三大候選人(柯文哲、丁守中、姚文智)的關注議題、受眾(社群)有感議題、以及媒體對於這三位候選人的關注 議題，與報導是否有偏頗傾向。
     </p>
   <h4> >>>作品連結 :</h4>
        1. R shiny : https://dppss90008.shinyapps.io/news_shiny/<br/>
        2. PPT簡報 : https://docs.google.com/presentation/d/1p2vua3FNWMaGRWYAarCJ8WTwRFNiI9LmvhUbOLukDQY/edit?usp=sharing<br/>
+       寫作情況 : 小組完成
   <h4>作品介紹 : </h4>
   <p>
    <h5>1. 選題動機 :</h5>  
