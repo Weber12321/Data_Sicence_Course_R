@@ -162,8 +162,8 @@ This page contains all my **works** for the class "**2018 spring Data Science Pr
 
 ### 二、作品連結 :<a name="作品連結"></a>
 寫作情況 : 小組完成   
-1. R shiny : [https://dppss90008.shinyapps.io/news_shiny/](https://dppss90008.shinyapps.io/news_shiny/)  
-2. PPT簡報 : [https://docs.google.com/presentation/d/1p2vua3FNWMaGRWYAarCJ8WTwRFNiI9LmvhUbOLukDQY/edit?usp=sharing](https://docs.google.com/presentation/d/1p2vua3FNWMaGRWYAarCJ8WTwRFNiI9LmvhUbOLukDQY/edit?usp=sharing)  
+1. [R shiny](https://dppss90008.shinyapps.io/news_shiny/)  
+2. [PPT簡報](https://docs.google.com/presentation/d/1p2vua3FNWMaGRWYAarCJ8WTwRFNiI9LmvhUbOLukDQY/edit?usp=sharing)  
 
 ### 三、作品介紹 :<a name="作品介紹"></a>
 
