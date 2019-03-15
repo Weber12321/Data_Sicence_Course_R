@@ -57,7 +57,7 @@ This page contains all my **works** for the class "**2018 spring Data Science Pr
         寫猜數字遊戲
 
 ### Week 2 : 資料爬蟲練習<a name="week2"></a>
-  作業連結 : [HW_2](https://weber12321.github.io/Weber1234/HW_2/HW_2_R.html)    
+  作業連結 : [HW_2](https://weber12321.github.io/Data_Sicence_Course_R/HW_2/HW_2_R.html)    
   寫作情況 : 自行完成   
   任務目標 : 使用**rvest**以及**CSS selector**練習爬取網頁資訊     
   資料來源 : [Dcard](https://www.dcard.tw/f)   
@@ -75,7 +75,7 @@ This page contains all my **works** for the class "**2018 spring Data Science Pr
      
        
 ### Week 3 : 資料視覺化練習<a name="week3"></a>
-  作業連結 : [HW_3](https://weber12321.github.io/Weber1234/HW_3/HW3_DataVisualizationRmd.html)    
+  作業連結 : [HW_3](https://weber12321.github.io/Data_Sicence_Course_R/HW_3/HW3_DataVisualizationRmd.html)    
   寫作情況 : 自行完成   
   任務目標 : 使用 **ggplot**與 **ggmap** 比較人口密度與公共圖書館密度     
   資料來源 :   
@@ -85,7 +85,7 @@ This page contains all my **works** for the class "**2018 spring Data Science Pr
 
 
 ### Week 4 : 爬蟲與視覺化小結<a name="week4"></a>
-  作業連結 : [HW_4](https://weber12321.github.io/Weber1234/HW_4/facebookDATAwordclould.html)   
+  作業連結 : [HW_4](https://weber12321.github.io/Data_Sicence_Course_R/HW_4/facebookDATAwordclould.html)   
   寫作情況 : 自行完成   
   任務目標 :   
   1. 使用 **facebook graphic api explorer** 與 **Rfacebook** 處理爬蟲資料   
@@ -102,7 +102,7 @@ This page contains all my **works** for the class "**2018 spring Data Science Pr
  
 ### Week 5 : 文本分析練習<a name="week5"></a>
 
-  作業連結 : [HW_5](https://weber12321.github.io/Weber1234/HW_5/HW_5.html)    
+  作業連結 : [HW_5](https://weber12321.github.io/Data_Sicence_Course_R/HW_5/HW_5.html)    
   寫作情況 : 自行完成   
   任務目標 : 柯文哲市長 2018 臉書分粉絲專頁發文文本分析**TF-IDF**   
   資料來源 : [柯文哲臉書粉絲專頁](https://www.facebook.com/DoctorKoWJ/)  
@@ -110,7 +110,7 @@ This page contains all my **works** for the class "**2018 spring Data Science Pr
    切完的詞在建立詞頻矩陣步驟時，總會出現些許亂碼
 
 ### Week 6 : 期中個人專題撰寫<a name="week6"></a>
-  作品連結 : [Project 1](https://weber12321.github.io/Weber1234/Project1/project1.html)   
+  作品連結 : [Project 1](https://weber12321.github.io/Data_Sicence_Course_R/Project1/project1.html)   
   寫作情況 : 自行完成   
   任務目標 : 撰寫柯文哲市長 2018 1-5月 聯合報新聞文本分析專題   
   資料來源 : [柯文哲聯合報](https://udn.com/search/result/2/%E6%9F%AF%E6%96%87%E5%93%B2)   
@@ -123,13 +123,13 @@ This page contains all my **works** for the class "**2018 spring Data Science Pr
 # 機器學習練習
 
 ### Week 7 : 資料科學作品分析<a name="week7"></a>
-作業連結 :  [project 2](https://github.com/Weber12321/Weber1234/blob/master/Project2/Group-5-Project-2.pdf)   
+作業連結 :  [project 2](https://github.com/Weber12321/Data_Sicence_Course_R/blob/master/Project2/Group-5-Project-2.pdf)   
 寫作情況 : 小組完成   
 任務目標 : 鐵達尼號罹難者建模 - **作品分析** (以 Kaggle 比賽參賽者程式為對象)     
 資料來源 : [Titanic: 2nd degree families and majority voting](https://www.kaggle.com/erikbruin/titanic-2nd-degree-families-and-majority-voting)
 
 ### Week 8 : 建模練習 :  SVM 與 GB<a name="week8"></a>
-作業連結 :  [project 3](https://weber12321.github.io/Weber1234/Project3/project_3.nb.html)   
+作業連結 :  [project 3](https://weber12321.github.io/Data_Sicence_Course_R/Project3/project_3.nb.html)   
 寫作情況 : 小組完成   
 任務目標 : 使用**鐵達尼號乘客原始資料**練習建模    
 資料來源 : [Titanic](https://github.com/NTU-CSX-DataScience/106-2RSampleCode/tree/master/week_8/task_8)   
@@ -139,7 +139,7 @@ This page contains all my **works** for the class "**2018 spring Data Science Pr
 顯示body的重要性十足，已具有成為預測參數的資格。初步猜測body為遺體資訊，具體規律無從得知。
 
 ### Week 9 : 建模練習 : Arules<a name="week9"></a>
-作業連結 :  [project 4](https://weber12321.github.io/Weber1234/project4/project4.html)    
+作業連結 :  [project 4](https://weber12321.github.io/Data_Sicence_Course_R/project4/project4.html)    
 寫作情況 : 小組完成   
 任務目標 : 使用R資料集 **iris 資料** 練習建模    
 >遇到的問題 :  
@@ -149,7 +149,7 @@ This page contains all my **works** for the class "**2018 spring Data Science Pr
 	iris資料組其實蠻一翻兩瞪眼的，資料間confidence都很高，甚至有一些到10，因此我們得出結論是，這三種花卉(setosa、versicolor、virginica)的生物特性其實分類也很直觀，不同種類有相異的長寬區間，所以出來的結果這麼極端。
 
 ### Week 10 : 建模練習 : nnet<a name="week10"></a>
-作業連結 :  [project 5](https://weber12321.github.io/Weber1234/Project5/project.html)  
+作業連結 :  [project 5](https://weber12321.github.io/Data_Sicence_Course_R/Project5/project.html)  
 寫作情況 : 小組完成   
 任務目標 : 使用 **wine 資料** 練習建模   
 資料來源 : [wine](https://rdrr.io/cran/rattle.data/man/wine.html)  
