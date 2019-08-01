@@ -6,7 +6,7 @@
 
 ## Table of Contents
 
-### 0. [Start and load data](#start and load data) 
+### 0. [Start and load data.](#start) 
 
 ### 1. [Missing value](#missing value) 
 
