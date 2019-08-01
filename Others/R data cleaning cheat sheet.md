@@ -6,41 +6,41 @@
 
 ## Table of Contents
 
-### 0. [Start and load data.](#start) 
+##### 0. [Start and load data.](#start) 
 
-### 1. [Missing value](#missing) 
+##### 1. [Missing value](#missing) 
 
-### 2. [Duplicated data](#duplicated) 
+##### 2. [Duplicated data](#duplicated) 
 
-### 3. [Split](#split) 
+##### 3. [Split](#split) 
 
-### 4. [Remove spaces](#remove) 
+##### 4. [Remove spaces](#remove) 
 
-### 5. [Append](#append) 
+##### 5. [Append](#append) 
 
-### 6. [Sort & filter](#sort) 
+##### 6. [Sort & filter](#sort) 
 
-### 7. [Combine](#combine) 
+##### 7. [Combine](#combine) 
 
-### 8. [Format](#format) 
+##### 8. [Format](#format) 
 
-### 9. [Replace](#replace) 
+##### 9. [Replace](#replace) 
 
-### 10. [Export data](#export) 
+##### 10. [Export data](#export) 
 
-### 11. [Ggplot x reorder](#ggplot) 
+##### 11. [Ggplot x reorder](#ggplot) 
 
-###  12. [Geocode](#geocode) 
+#####  12. [Geocode](#geocode) 
 
-### 13. [Data shaping(pivot)](#data) 
+##### 13. [Data shaping(pivot)](#data) 
 
-### 14. [Detect](#detect) 
+##### 14. [Detect](#detect) 
 
-### 15. [Regex](#regex) 
+##### 15. [Regex](#regex) 
 
-### 16. [Difference from datetime](#difference) 
+##### 16. [Difference from datetime](#difference) 
 
-### 17. [Trouble shooting](#trouble) 
+##### 17. [Trouble shooting](#trouble) 
 
 *****
 
@@ -288,5 +288,5 @@ file = file %>%
 
 * A2 : This is a default language problem, since R's default language is English,
        if u wanna change default language, for example change English to Mandarin Chinese,
-       add a line Sys.setlocale(category="LC_ALL",locale="cht") at the top of the script.
+       add a line   ```{r}Sys.setlocale(category="LC_ALL",locale="cht")```  at the top of the script.
        Since this way isn't permanant, make sure add the line to the script what u wanna deal.
