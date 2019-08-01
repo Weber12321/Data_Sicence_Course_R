@@ -8,17 +8,17 @@
 
 ### 0. [Start and load data.](#start) 
 
-### 1. [Missing value](#missing value) 
+### 1. [Missing value](#missing) 
 
-### 2. [Duplicated data](#duplicated data) 
+### 2. [Duplicated data](#duplicated) 
 
 ### 3. [Split](#split) 
 
-### 4. [Remove spaces](#remove spaces) 
+### 4. [Remove spaces](#remove) 
 
 ### 5. [Append](#append) 
 
-### 6. [Sort & filter](#sort & filter) 
+### 6. [Sort & filter](#sort) 
 
 ### 7. [Combine](#combine) 
 
@@ -26,21 +26,21 @@
 
 ### 9. [Replace](#replace) 
 
-### 10. [Export data](#export data) 
+### 10. [Export data](#export) 
 
-### 11. [Ggplot x reorder](#ggplot x reorder) 
+### 11. [Ggplot x reorder](#ggplot) 
 
 ###  12. [Geocode](#geocode) 
 
-### 13. [Data shaping(pivot)](#data shaping(pivot)) 
+### 13. [Data shaping(pivot)](#data) 
 
 ### 14. [Detect](#detect) 
 
 ### 15. [Regex](#regex) 
 
-### 16. [Difference from datetime](#difference from datetime) 
+### 16. [Difference from datetime](#difference) 
 
-### 17. [Trouble shooting](#trouble shooting) 
+### 17. [Trouble shooting](#trouble) 
 
 *****
 
@@ -79,7 +79,7 @@ file <- readxl::read_excel("file.xlsx","sheet name or index")
 
 
 
-### Missing value
+### Missing value<a name="missing"></a>
 
 ```{r}
 # missing value
@@ -94,7 +94,7 @@ file = file %>% na.omit()
 
 
 
-### Duplicated data
+### Duplicated data<a name="duplicated"></a>
 
 ```{r}
 # duplicated data
@@ -117,7 +117,7 @@ file <- cbind(splitstackshape::cSplit(file, 'column name', ','))
 
 
 
-### Remove spaces
+### Remove spaces<a name="remove"></a>
 
 ```{r}
 # remove spaces
@@ -135,7 +135,7 @@ file$col = file$col %>% paste("what ya wanna paste", sep = " ")
 
 
 
-### Sort & filter
+### Sort & filter<a name="sort"></a>
 
 ```{r}
 # sort & filter
@@ -183,7 +183,7 @@ file <- file %>% mutate(result = stri_detect_regex(value,x))
 
 
 
-### Export data
+### Export data<a name="export"></a>
 
 ```{r}
 # export data
@@ -192,7 +192,7 @@ write.csv(file, file = "name_of_the_file.csv", row.names = FALSE, na = "")
 
 
 
-### Ggplot x reorder
+### Ggplot x reorder<a name="ggplot"></a>
 
 ```{r}
 # ggplot x reorder
@@ -230,7 +230,7 @@ write.csv(file, file = "", row.names = FALSE, na = "")
 
 
 
-### Data shaping(pivot)
+### Data shaping(pivot)<a name="data"></a>
 
 ```{r}
 data shaping
@@ -263,7 +263,7 @@ stringr::str_locate_all(pattern = 'x',file$col)
 
 
 
-### Difference from datetime
+### Difference from datetime<a name="difference"></a>
 
 ```{r}
 # difference from datetime (dplyr)
@@ -276,7 +276,7 @@ file = file %>%
 
 
 
-### Trouble shooting
+### Trouble shooting<a name="trouble"></a>
 
 ##### load file
 
