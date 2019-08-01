@@ -6,41 +6,41 @@
 
 ## Table of Contents
 
-### 0. [Start and load data](#start and load data)
+### 0. [Start and load data](#start and load data) 
 
-### 1. [Missing value](#missing value)
+### 1. [Missing value](#missing value) 
 
-### 2. [Duplicated data](#duplicated data)
+### 2. [Duplicated data](#duplicated data) 
 
-### 3. [Split](#split)
+### 3. [Split](#split) 
 
-### 4. [Remove spaces](#remove spaces)
+### 4. [Remove spaces](#remove spaces) 
 
-### 5. [Append](#append)
+### 5. [Append](#append) 
 
-### 6. [Sort & filter](#sort & filter)
+### 6. [Sort & filter](#sort & filter) 
 
-### 7. [Combine](#combine)
+### 7. [Combine](#combine) 
 
-### 8. [Format](#format)
+### 8. [Format](#format) 
 
-### 9. [Replace](#replace)
+### 9. [Replace](#replace) 
 
-### 10. [Export data](#export data)
+### 10. [Export data](#export data) 
 
-### 11. [Ggplot x reorder](#ggplot x reorder)
+### 11. [Ggplot x reorder](#ggplot x reorder) 
 
-###  12. [Geocode](#geocode)
+###  12. [Geocode](#geocode) 
 
-### 13. [Data shaping(pivot)](#data shaping(pivot))
+### 13. [Data shaping(pivot)](#data shaping(pivot)) 
 
-### 14. [Detect](#detect)
+### 14. [Detect](#detect) 
 
-### 15. [Regex](#regex)
+### 15. [Regex](#regex) 
 
-### 16. [Difference from datetime](#difference from datetime)
+### 16. [Difference from datetime](#difference from datetime) 
 
-### 17. [Trouble shooting](#trouble shooting)
+### 17. [Trouble shooting](#trouble shooting) 
 
 *****
 
