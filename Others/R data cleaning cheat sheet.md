@@ -259,7 +259,7 @@ stringr::str_locate_all(pattern = 'x',file$col)
 
 ### Regex
 
-[This article]('https://blog.yjtseng.info/post/regexpr/') might help to dealing with string issues.
+[This article](https://blog.yjtseng.info/post/regexpr/) might help to dealing with string issues.
 
 
 
