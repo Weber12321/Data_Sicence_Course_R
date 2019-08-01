@@ -280,13 +280,13 @@ file = file %>%
 
 ##### load file
 
-* Q1 : Error in   ```{r}(col.names, unique = TRUE) : invalid multibyte string 1```
+* Q1 : Error in   ```(col.names, unique = TRUE) : invalid multibyte string 1```
 
 * A1 : Re-saving file as  **CSV (comma delimited)(*.csv)** from **CSV UTF-8 (comma delimited)(*.csv)**
 
-* Q2 : Warning message of   ```{r}input string 1 is invalid in this locale```
+* Q2 : Warning message of   ```input string 1 is invalid in this locale```
 
 * A2 : This is a default language problem, since R's default language is English,
        if u wanna change default language, for example change English to Mandarin Chinese,
-       add a line   ```{r}Sys.setlocale(category="LC_ALL",locale="cht")```  at the top of the script.
+       add a line   ```Sys.setlocale(category="LC_ALL",locale="cht")```  at the top of the script.
        Since this way isn't permanant, make sure add the line to the script what u wanna deal.
