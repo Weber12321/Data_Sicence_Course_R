@@ -90,7 +90,7 @@ sapply(file, function(x) {sum(is.na(x))})
 file = file %>% na.omit()
 ```
 
-[This article]('http://r-statistics.co/Missing-Value-Treatment-With-R.html') might help to handling the missing value.
+[This article](http://r-statistics.co/Missing-Value-Treatment-With-R.html) might help to handling the missing value.
 
 
 
